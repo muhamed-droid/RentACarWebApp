@@ -1,0 +1,4 @@
+root: C:\Users\masno\Desktop\MuhamedFaks\MednoMasApp\MednoMasApp\client 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none
