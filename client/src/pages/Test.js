@@ -22,7 +22,8 @@ function Test() {
             </ul>
           </nav>
           <div className="contact-info">
-          <p><FaPhone /> <a className="link" href="tel:+1234567890">123-456-7890</a></p>
+          <p><FaPhone /> <a className="link" href="tel:+436607700543">+436607700543</a></p>
+          <p><FaPhone /> <a className="link" href="tel:+436603135530">+436603135530</a></p>
           <p><FaEnvelope /> <a className="link" href="mailto:info@example.com">info@example.com</a></p>
           </div>
         </header>
