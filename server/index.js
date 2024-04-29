@@ -9,9 +9,9 @@ app.use(express.json());
 
 //Routers 
 
-const productsRouter = require ('./routes/Vehicles');
+const vehiclesRouter = require ('./routes/Vehicles');
 
-app.use("/vehicles", productsRouter);
+app.use("/vehicles", vehiclesRouter);
 
 
 db.sequelize.sync().then(() => {

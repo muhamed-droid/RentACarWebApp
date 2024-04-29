@@ -16,7 +16,7 @@ router.get('/byId/:id', async (req, res) => {
 
 router.post("/", async (req, res) => {
    const vehicle = req.body;
-    await Products.create(vehicle);
+    await Vehicles.create(vehicle);
     res.json(vehicle);
 });
 

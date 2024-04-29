@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter> 
-        <Link to="/createvehicle"> Create a Product</Link>
+        <Link to="/createvehicle"> Create a Vehicle</Link>
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/createvehicle" element={<CreateVehicle/>}/>

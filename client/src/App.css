@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.products {
+.vehicles{
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
