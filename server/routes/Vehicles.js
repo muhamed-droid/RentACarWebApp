@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {Vehicles} = require("../models");
+const { Vehicles } = require("../models");
 
 
 router.get("/", async (req, res) => {
@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 
 router.get('/byId/:id', async (req, res) => {
     const id = req.params.id;
-    const vehicle = await Vehicle.findByPk(id);
+    const vehicle = await Vehicles.findByPk(id);
     res.json(vehicle);
 })
 
