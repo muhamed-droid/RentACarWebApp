@@ -5,7 +5,7 @@ import './css/Form.css';
 
 const RentForm = ({ onSubmit }) => {
   const [showAdditionalForm, setShowAdditionalForm] = useState(false);
-
+  const [Submitting, setSubmitting] = useState(false);
   return (
     <div className="form-container">
       <h2>Rent a Car</h2>
@@ -60,22 +60,24 @@ const RentForm = ({ onSubmit }) => {
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : showAdditionalForm ? 'Submit Request' : 'Next'}
             </button>
-            {showAdditionalForm && (
-              <button
-                type="button"
-                onClick={() => setShowAdditionalForm(false)
-                }
-                className="close-button"
-              >
-                X
-              </button>
-            )}
+            {showAdditionalForm}
           </Form>
         )}
       </Formik>
 
       {showAdditionalForm && (
         <div className="additional-form-container">
+          <button
+                type="button"
+                onClick={() => {
+                  setShowAdditionalForm(false);
+                  setSubmitting(false);
+                }
+              }
+                className="close-button"
+              >
+                X
+              </button>
           <h2>Additional Information</h2>
           <Formik
             initialValues={{

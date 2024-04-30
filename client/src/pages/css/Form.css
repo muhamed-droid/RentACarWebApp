@@ -98,10 +98,10 @@
     position: relative;
   }
   
-  .close-button {
+  .additional-form-container .close-button {
     position: absolute;
-    top: -15px; /* Pomaknite dugme prema gore malo više */
-    right: -15px; /* Pomaknite dugme prema desno malo više */
+    top: 10px; /* Pomaknite dugme prema gore malo više */
+    right: 10px; /* Pomaknite dugme prema desno malo više */
     background-color: #ccc;
     border: none;
     border-radius: 50%;

@@ -16,7 +16,7 @@ function Test() {
           <nav className="menu">
             <ul>
               <li><Link to="/">Homepage</Link></li>
-              <li><Link to="/aboutus">About Us</Link></li>
+              <li><Link to="/aboutUs">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/info">Info</Link></li>
             </ul>
