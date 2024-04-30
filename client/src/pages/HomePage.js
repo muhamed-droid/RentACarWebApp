@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomePage.css'; // Import CSS for styling
+import './css/HomePage.css'; // Import CSS for styling
 
 function HomePage() {
   return (
