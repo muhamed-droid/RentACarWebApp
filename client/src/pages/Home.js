@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import './css/Home.css'
 import Vehicles from "./Vehicles";
+import Form from "./Form";
 
 function Home() {
 
@@ -20,22 +21,21 @@ function Home() {
     });
   }, []);
 
-  
-
-
   return (
-    <div className='home'>
-    <div className='navbar'>
-      <Navbar></Navbar>
+    <div className='home-container'>
+      <div className='navbar'>
+        <Navbar></Navbar>
+      </div>
+      <div className='home-content'>
+        <div className='form'>
+          <Form></Form>
+        </div>
+        <div className='vozila'>
+          <Vehicles></Vehicles>
+        </div>
+      </div>
     </div>
-    <div className='vozila'>
-      <Vehicles></Vehicles>
-    </div>
-    </div>
-
   ) 
 } 
 
 export default Home 
-
-

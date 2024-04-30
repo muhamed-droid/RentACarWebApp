@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Vehicle from './pages/Vehicle';
 import HomePage from './pages/HomePage';
 
+//            <Route path="/vehicle/:id" element={<Vehicle/>}/> 
+
 function App() {
 
   return (
@@ -12,7 +14,6 @@ function App() {
       <BrowserRouter> 
           <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/vehicle/:id" element={<Vehicle/>}/>
           </Routes>
       </BrowserRouter>
     </div>
