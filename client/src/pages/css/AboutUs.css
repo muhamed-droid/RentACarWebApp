@@ -1,0 +1,59 @@
+/* src/components/AboutUs.css */
+.aboutUs {
+    font-family: Arial, sans-serif;
+    background: url('../../photos/background.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero {
+    margin-top: 150px;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .hero h1 {
+    color: #fff;
+  }
+  
+  .hero p {
+    color: #fff;
+  }
+  
+  .team {
+    padding: 20px;
+    text-align: center;
+  }
+  .team h2{
+    color: #fff;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .team-member h3 {
+    color: #333;
+  }
+  
+  .team-member p {
+    color: #666;
+  }
+  
