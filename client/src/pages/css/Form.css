@@ -93,4 +93,25 @@
   .additional-form-container button:hover {
     background-color: #0056b3;
   }
+
+  .additional-form-container {
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -15px; /* Pomaknite dugme prema gore malo više */
+    right: -15px; /* Pomaknite dugme prema desno malo više */
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    width: 30px; /* Povećajte veličinu dugmeta */
+    height: 30px; /* Povećajte veličinu dugmeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1; /* Postavite z-index kako bi bilo iznad forme */
+  }
   

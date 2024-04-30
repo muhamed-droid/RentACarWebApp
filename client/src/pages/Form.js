@@ -60,6 +60,16 @@ const RentForm = ({ onSubmit }) => {
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : showAdditionalForm ? 'Submit Request' : 'Next'}
             </button>
+            {showAdditionalForm && (
+              <button
+                type="button"
+                onClick={() => setShowAdditionalForm(false)
+                }
+                className="close-button"
+              >
+                X
+              </button>
+            )}
           </Form>
         )}
       </Formik>
@@ -82,6 +92,7 @@ const RentForm = ({ onSubmit }) => {
             })}
             onSubmit={(values, { setSubmitting }) => {
               onSubmit(values);
+              setShowAdditionalForm(false);
               setSubmitting(false);
             }}
           >
