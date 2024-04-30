@@ -1,0 +1,81 @@
+/* App.css */
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif; /* Change the font */
+    width: 100%; /* Make the header wider */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 999;
+  }
+  
+  .logo img {
+    height: 160px; /* Adjust the width of the logo */
+  }
+  
+  .link{
+    color: white;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .contact-info p:first-child {
+    margin-bottom: 5px;
+  }
+  
+.contact-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Display items in a column */
+  }
+  
+  .contact-info p {
+    margin-top: 10px; /* Add some space between phone and email */
+    font-size: 16px;
+    margin-right: 30px;
+  }
+  
+  .contact-info i {
+    margin-right: 5px;
+  }
+
+  /* Test.css */
+
+/* Menu Styles */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu ul li {
+    display: inline;
+    margin-right: 40px; /* Increase the gap between menu items */
+  }
+  
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px; /* Increase the font size */
+    transition: color 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    color: #ffd700;
+  }
