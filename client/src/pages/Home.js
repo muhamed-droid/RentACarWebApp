@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Home() {
 
@@ -22,6 +23,8 @@ function Home() {
 
   return (
     <div>
+      <Navbar></Navbar>
+    <div>
       {listOfVehicles.map( (value,key) => {
         return <div className="vehicles" onClick={handleClick}> 
         <div className="name"> {value.name} </div> 
@@ -29,6 +32,8 @@ function Home() {
         <div className="price"> {value.price} </div>
       </div>})}
     </div>
+    </div>
+
   ) 
 } 
 

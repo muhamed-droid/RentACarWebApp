@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage} from "formik";
-import './CreateVehicle.css';
+import './css/CreateVehicle.css';
 import axios from "axios";
 import * as Yup from 'yup';
 
