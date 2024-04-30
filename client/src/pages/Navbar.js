@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import Logo from '../photos/logo.png'
 
-import './css/Test.css'
+import './Test.css'
 
 function Test() {
   return (
