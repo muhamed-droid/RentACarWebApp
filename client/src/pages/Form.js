@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './css/Form.css';
 
 const RentForm = ({ onSubmit }) => {
+  const [showAdditionalForm, setShowAdditionalForm] = useState(false);
+
   return (
     <div className="form-container">
       <h2>Rent a Car</h2>
@@ -21,8 +23,13 @@ const RentForm = ({ onSubmit }) => {
           vehicle: Yup.string().required('Vehicle is required')
         })}
         onSubmit={(values, { setSubmitting }) => {
-          onSubmit(values);
-          setSubmitting(false);
+          if (!showAdditionalForm) {
+            setShowAdditionalForm(true);
+          } else {
+            onSubmit(values);
+            setShowAdditionalForm(false);
+            setSubmitting(false);
+          }
         }}
       >
         {({ isSubmitting }) => (
@@ -51,11 +58,67 @@ const RentForm = ({ onSubmit }) => {
             </div>
 
             <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'Sending...' : 'Send Request'}
+              {isSubmitting ? 'Sending...' : showAdditionalForm ? 'Submit Request' : 'Next'}
             </button>
           </Form>
         )}
       </Formik>
+
+      {showAdditionalForm && (
+        <div className="additional-form-container">
+          <h2>Additional Information</h2>
+          <Formik
+            initialValues={{
+              name: '',
+              surname: '',
+              email: '',
+              number: ''
+            }}
+            validationSchema={Yup.object().shape({
+              name: Yup.string().required('Name is required'),
+              surname: Yup.string().required('Surname is required'),
+              email: Yup.string().email('Invalid email').required('Email is required'),
+              number: Yup.string().required('Number is required')
+            })}
+            onSubmit={(values, { setSubmitting }) => {
+              onSubmit(values);
+              setSubmitting(false);
+            }}
+          >
+            {({ isSubmitting }) => (
+              <Form>
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <Field type="text" name="name" />
+                  <ErrorMessage name="name" component="div" className="error" />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="surname">Surname</label>
+                  <Field type="text" name="surname" />
+                  <ErrorMessage name="surname" component="div" className="error" />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <Field type="email" name="email" />
+                  <ErrorMessage name="email" component="div" className="error" />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="number">Number</label>
+                  <Field type="tel" name="number" />
+                  <ErrorMessage name="number" component="div" className="error" />
+                </div>
+
+                <button type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Submit'}
+                </button>
+              </Form>
+            )}
+          </Formik>
+        </div>
+      )}
     </div>
   );
 };
