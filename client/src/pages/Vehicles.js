@@ -3,8 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import './css/Home.css'
-import Vehicles from "./Vehicles";
+import './css/Vehicles.css'
 
 function Home() {
 
@@ -24,13 +23,13 @@ function Home() {
 
 
   return (
-    <div className='home'>
-    <div className='navbar'>
-      <Navbar></Navbar>
-    </div>
     <div className='vozila'>
-      <Vehicles></Vehicles>
-    </div>
+      {listOfVehicles.map( (value,key) => {
+        return <div className="vehicles" onClick={handleClick}> 
+        <div className="name"> {value.name} </div> 
+        <div className="body"> {value.description} </div> 
+        <div className="price"> {value.price} </div>
+      </div>})}
     </div>
 
   ) 

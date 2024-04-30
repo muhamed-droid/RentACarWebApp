@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import Logo from '../photos/logo.png'
 
-import './Test.css'
+import './css/Navbar.css'
 
 function Test() {
   return (

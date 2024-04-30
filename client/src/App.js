@@ -3,7 +3,6 @@ import './App.css';
 import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
 import Home from './pages/Home'; 
 import Vehicle from './pages/Vehicle';
-import Test from './pages/Test'
 import HomePage from './pages/HomePage';
 
 function App() {
