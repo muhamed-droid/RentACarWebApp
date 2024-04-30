@@ -2,6 +2,32 @@
   text-align: center;
 }
 
+.link{
+  color: #007bff; /* boja teksta */
+  text-decoration: none; /* uklanja podcrtavanje */
+  transition: color 0.3s ease; /* glatka tranzicija boje teksta */
+}
+
+.link:hover{
+  color: #0056b3; /* promjena boje teksta */
+}
+
+.link:active {
+  color: #0056b3; /* dodatna promjena boje teksta */
+}
+
+.btn-link {
+  border: none; /* uklanja granice */
+  background-color: transparent; /* prozirna pozadina */
+  cursor: pointer; /* pokazivač miša */
+}
+
+/* Kada korisnik pređe preko linka u navigacijskoj traci ili gumbu */
+.nav-link:hover,
+.btn-link:hover {
+  color: #0056b3; /* promjena boje teksta */
+}
+
 .vehicles{
   display: flex;
   flex-direction: column;
