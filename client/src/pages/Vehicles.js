@@ -1,8 +1,6 @@
 import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 import './css/Vehicles.css'
 
 function Home() {
@@ -10,7 +8,7 @@ function Home() {
     const [listOfVehicles, setListOfVehicles] = useState([]);
 
     function handleClick() {
-      <Link to='/vehicle/${value.id}'> Vehicle is here</Link>
+      //Code to handle on click
     }
 
   useEffect(() => {
