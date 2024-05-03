@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        fuel_consumption:{
+        transmission:{
             type: DataTypes.STRING,
             allowNull: false,
         },
