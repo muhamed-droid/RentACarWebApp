@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Vehicle = sequelize.define("Vehicle", {
+    const Vehicles = sequelize.define("Vehicles", {
         manufacturer:{
             type: DataTypes.STRING,
             allowNull: false
@@ -29,13 +29,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }, 
         additional_description:{
-            type:DataTypes.STRING,
-            allowNull: false
+            type:DataTypes.STRING
         },
         image_name:{
             type:DataTypes.STRING,
             allowNull:false
         }
     });
-    return Vehicle;
+    return Vehicles;
 }

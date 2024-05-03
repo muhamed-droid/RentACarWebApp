@@ -27,7 +27,7 @@ function Home() {
         <div className="name"> {value.name} </div> 
         <div className="body"> {value.description} </div> 
         <div className="price"> {value.price} </div>
-        <img src={`../photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
+        <img src={`photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
       </div>})}
     </div>
 
