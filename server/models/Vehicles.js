@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.DOUBLE,
             allowNull: false
         }, 
-        photo: {
-            type: DataTypes.BLOB
+        image_name: {
+            type:DataTypes.STRING
         }
     });
     return Vehicles;

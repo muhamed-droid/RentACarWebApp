@@ -15,7 +15,7 @@ function Vehicle() {
 
   return (
     <div>
-        {vehicleObject.description}
+        {vehicleObject.additional_description}
     </div>
   )
 }
