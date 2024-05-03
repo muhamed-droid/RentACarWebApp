@@ -10,4 +10,11 @@
     position: relative;
     z-index: 1;
   }
+
+  .slika{
+    width: 20%;
+    height: 20%;
+  }
+  
+
   

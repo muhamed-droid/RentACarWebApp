@@ -39,7 +39,7 @@ function Home() {
             <p>Kilometer: {selectedVehicle.kilometer}</p>
             <p>Price: {selectedVehicle.price}</p>
             <p>Additional Description: {selectedVehicle.additional_description}</p>
-            <img src={`photos/${selectedVehicle.image_name}`} alt="Vehicle" />
+            <img className="slika" src={`photos/${selectedVehicle.image_name}`} alt="Vehicle" />
           </Modal>
         )}
         <div className='form'>
