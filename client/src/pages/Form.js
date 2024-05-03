@@ -1,11 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './css/Form.css';
 
+const fetchVehicles = async () => {
+  try {
+    const response = await fetch('http://localhost:3001/vehicles'); // Zamijeni 'URL/api/vehicles' sa stvarnim endpointom za dohvat podataka o automobilima
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching vehicles:', error);
+    return [];
+  }
+};
+
+
 const RentForm = ({ onSubmit }) => {
   const [showAdditionalForm, setShowAdditionalForm] = useState(false);
   const [Submitting, setSubmitting] = useState(false);
+  const [vehicles, setVehicles] = useState([]);
+  useEffect(() => {
+    const getVehicles = async () => {
+      const data = await fetchVehicles();
+      setVehicles(data);
+    };
+    getVehicles();
+  }, []);
   return (
     <div className="form-container">
       <h2>Rent a Car</h2>
@@ -49,10 +69,12 @@ const RentForm = ({ onSubmit }) => {
             <div className="form-group">
               <label htmlFor="vehicle">Vehicle</label>
               <Field as="select" name="vehicle">
-                <option value="">Select a vehicle</option>
-                <option value="car1">Car 1</option>
-                <option value="car2">Car 2</option>
-                <option value="car3">Car 3</option>
+              <option value="">Select a vehicle</option>
+              {vehicles.map(vehicle => (
+                <option key={vehicle.id} value={vehicle.name}>
+              {vehicle.name}
+              </option>
+              ))} 
               </Field>
               <ErrorMessage name="vehicle" component="div" className="error" />
             </div>
