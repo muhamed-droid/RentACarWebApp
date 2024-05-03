@@ -27,11 +27,11 @@ function Home() {
         <Navbar></Navbar>
       </div>
       <div className='home-content'>
+        <div className='vozila'>
+        <Vehicles></Vehicles>
+        </div>
         <div className='form'>
           <Form></Form>
-        </div>
-        <div className='vozila'>
-          <Vehicles></Vehicles>
         </div>
       </div>
     </div>

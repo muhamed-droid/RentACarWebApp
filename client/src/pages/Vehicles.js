@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import './css/Vehicles.css'
+import './css/Vehicles.css';
 
 function Home() {
 
@@ -27,6 +27,7 @@ function Home() {
         <div className="name"> {value.name} </div> 
         <div className="body"> {value.description} </div> 
         <div className="price"> {value.price} </div>
+        <img src={`../photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
       </div>})}
     </div>
 
