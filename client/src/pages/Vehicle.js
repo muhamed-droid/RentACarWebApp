@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import axios from "axios";
 
 function Vehicle() {
-        let {id} = useParams(); 
+        let {id} = useParams();
 
         const [vehicleObject, setVehicleObject] = useState({});
 
@@ -12,10 +12,20 @@ function Vehicle() {
                 setVehicleObject(response.data);
              });
           }, []);
+          console.log(vehicleObject);
 
   return (
     <div>
-        {vehicleObject.additional_description}
+        <div className="vehicle-details">
+            <h3>{vehicleObject.manufacturer} {vehicleObject.model}</h3>
+            <p>Year: {vehicleObject.year}</p>
+            <p>Fuel Type: {vehicleObject.type_of_fuel}</p>
+            <p>Transmission: {vehicleObject.transmission}</p>
+            <p>Kilometer: {vehicleObject.kilometer}</p>
+            <p>Price: {vehicleObject.price}</p>
+            <p>Additional Description: {vehicleObject.additional_description}</p>
+            <img src={`photos/${vehicleObject.image_name}`} alt="Vehicle" />
+          </div>
     </div>
   )
 }
