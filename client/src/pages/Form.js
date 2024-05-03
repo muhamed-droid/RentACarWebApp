@@ -72,7 +72,7 @@ const RentForm = ({ onSubmit }) => {
               <option value="">Select a vehicle</option>
               {vehicles.map(vehicle => (
                 <option key={vehicle.id} value={vehicle.name}>
-              {vehicle.name}
+              {vehicle.manufacturer + ' ' + vehicle.model + ' ' + vehicle.year}
               </option>
               ))} 
               </Field>
