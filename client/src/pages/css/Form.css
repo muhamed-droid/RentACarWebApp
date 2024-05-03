@@ -114,4 +114,19 @@
     font-weight: bold;
     z-index: 1; /* Postavite z-index kako bi bilo iznad forme */
   }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 100;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+
+
   

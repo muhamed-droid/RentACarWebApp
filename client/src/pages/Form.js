@@ -5,7 +5,7 @@ import './css/Form.css';
 
 const fetchVehicles = async () => {
   try {
-    const response = await fetch('http://localhost:3001/vehicles'); // Zamijeni 'URL/api/vehicles' sa stvarnim endpointom za dohvat podataka o automobilima
+    const response = await fetch('http://localhost:3001/vehicles');
     const data = await response.json();
     return data;
   } catch (error) {
@@ -14,11 +14,12 @@ const fetchVehicles = async () => {
   }
 };
 
-
 const RentForm = ({ onSubmit }) => {
   const [showAdditionalForm, setShowAdditionalForm] = useState(false);
-  const [Submitting, setSubmitting] = useState(false);
+  const [submissionComplete, setSubmissionComplete] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [vehicles, setVehicles] = useState([]);
+
   useEffect(() => {
     const getVehicles = async () => {
       const data = await fetchVehicles();
@@ -26,6 +27,14 @@ const RentForm = ({ onSubmit }) => {
     };
     getVehicles();
   }, []);
+
+  const handleFinalSubmit = (values, { setSubmitting }) => {
+    //onSubmit(values);
+    //setShowAdditionalForm(false); // Zatvara drugu formu
+    //setSubmissionComplete(true); // Pokazuje popup
+    //setSubmitting(false);
+  };
+
   return (
     <div className="form-container">
       <h2>Rent a Car</h2>
@@ -44,15 +53,15 @@ const RentForm = ({ onSubmit }) => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           if (!showAdditionalForm) {
+            //setSubmissionComplete(false);
             setShowAdditionalForm(true);
+            //setSubmitting(false);
           } else {
-            onSubmit(values);
-            setShowAdditionalForm(false);
-            setSubmitting(false);
+            handleFinalSubmit(values, { setSubmitting });
           }
         }}
       >
-        {({ isSubmitting }) => (
+        {() => (
           <Form>
             <div className="form-group">
               <label htmlFor="startDate">Start Date</label>
@@ -69,20 +78,19 @@ const RentForm = ({ onSubmit }) => {
             <div className="form-group">
               <label htmlFor="vehicle">Vehicle</label>
               <Field as="select" name="vehicle">
-              <option value="">Select a vehicle</option>
-              {vehicles.map(vehicle => (
-                <option key={vehicle.id} value={vehicle.name}>
-              {vehicle.manufacturer + ' ' + vehicle.model + ' ' + vehicle.year}
-              </option>
-              ))} 
+                <option value="">Select a vehicle</option>
+                {vehicles.map(vehicle => (
+                  <option key={vehicle.id} value={vehicle.name}>
+                    {vehicle.manufacturer + ' ' + vehicle.model + ' ' + vehicle.year}
+                  </option>
+                ))}
               </Field>
               <ErrorMessage name="vehicle" component="div" className="error" />
             </div>
 
-            <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'Sending...' : showAdditionalForm ? 'Submit Request' : 'Next'}
+            <button type="submit" disabled={submitting}>
+              {submitting ? 'Sending...' : showAdditionalForm ? 'Submit Request' : 'Next'}
             </button>
-            {showAdditionalForm}
           </Form>
         )}
       </Formik>
@@ -90,16 +98,15 @@ const RentForm = ({ onSubmit }) => {
       {showAdditionalForm && (
         <div className="additional-form-container">
           <button
-                type="button"
-                onClick={() => {
-                  setShowAdditionalForm(false);
-                  setSubmitting(false);
-                }
-              }
-                className="close-button"
-              >
-                X
-              </button>
+            type="button"
+            onClick={() => {
+              setShowAdditionalForm(false);
+              //setSubmissionComplete(false);
+            }}
+            className="close-button"
+          >
+            X
+          </button>
           <h2>Additional Information</h2>
           <Formik
             initialValues={{
@@ -115,12 +122,12 @@ const RentForm = ({ onSubmit }) => {
               number: Yup.string().required('Number is required')
             })}
             onSubmit={(values, { setSubmitting }) => {
-              onSubmit(values);
               setShowAdditionalForm(false);
-              setSubmitting(false);
+              setSubmissionComplete(true);
+              //handleFinalSubmit(values, { setSubmitting });
             }}
           >
-            {({ isSubmitting }) => (
+            {() => (
               <Form>
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
@@ -146,12 +153,27 @@ const RentForm = ({ onSubmit }) => {
                   <ErrorMessage name="number" component="div" className="error" />
                 </div>
 
-                <button type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? 'Sending...' : 'Submit'}
+                <button type="submit" disabled={submitting}>
+                  {submitting ? 'Sending...' : 'Submit'}
                 </button>
               </Form>
             )}
           </Formik>
+        </div>
+      )}
+
+      {submissionComplete && (
+        <div className="popup">
+          <p>Submission Complete! Your request has been successfully sent.</p>
+          <button
+            type="button"
+            onClick={() => {
+              setSubmissionComplete(false);
+            }}
+            className="close-button"
+          >
+            OK
+          </button>
         </div>
       )}
     </div>
