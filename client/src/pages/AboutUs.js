@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Dino from '../photos/Dino.jpg';
 import Map from './Map.js';
 import AllRightsReserved from './AllRightsReserved.js';
+import ButtonToTop from './ButtonToTop.js';
 
 const AboutUs = () => {
   return (
@@ -30,6 +31,9 @@ const AboutUs = () => {
       </div>
       <div className='google-map'>
         <Map/>
+      </div>
+      <div>
+        <ButtonToTop/>
       </div>
       <div className='allRightsReserved'>
         <AllRightsReserved/>

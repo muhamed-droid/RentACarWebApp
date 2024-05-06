@@ -8,6 +8,7 @@ import Form from './Form.js';
 import Map from './Map.js';
 import AllRightsReserved from './AllRightsReserved.js';
 import FAQ from './FAQ.js';
+import ButtonToTop from './ButtonToTop.js';
 
 function Home() {
   const [listOfVehicles, setListOfVehicles] = useState([]);
@@ -49,6 +50,9 @@ function Home() {
         )}
         <div className='form'>
           <Form></Form>
+        </div>
+        <div>
+          <ButtonToTop/>
         </div>
         <div className='FAQ'>
           <FAQ/>

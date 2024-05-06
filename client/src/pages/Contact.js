@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import './css/Home.css';
 import Map from './Map';
 import AllRightsReserved from './AllRightsReserved';
+import ButtonToTop from './ButtonToTop';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -100,6 +101,9 @@ const Contact = () => {
     </div>
     <div className='google-map'>
       <Map/>
+    </div>
+    <div>
+      <ButtonToTop/>
     </div>
     <div className='allRightsReservedx'>
       <AllRightsReserved/>
