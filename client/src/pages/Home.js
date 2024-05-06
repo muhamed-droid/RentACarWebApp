@@ -5,6 +5,7 @@ import Vehicles from './Vehicles';
 import Modal from '../Modal.js';
 import './css/Home.css';
 import Form from './Form.js';
+import Map from './Map.js';
 
 function Home() {
   const [listOfVehicles, setListOfVehicles] = useState([]);
@@ -25,6 +26,8 @@ function Home() {
     setSelectedVehicle(null);
   };
 
+
+
   return (
     <div className='home-container'>
       <Navbar />
@@ -44,6 +47,9 @@ function Home() {
         )}
         <div className='form'>
           <Form></Form>
+        </div>
+        <div className="google-map"> 
+          <Map></Map>
         </div>
       </div>
     </div>
