@@ -4,6 +4,7 @@ import './css/AboutUs.css'; // Make sure to create this CSS file
 import Navbar from './Navbar';
 import Dino from '../photos/Dino.jpg';
 import Map from './Map.js';
+import AllRightsReserved from './AllRightsReserved.js';
 
 const AboutUs = () => {
   return (
@@ -29,6 +30,9 @@ const AboutUs = () => {
       </div>
       <div className='google-map'>
         <Map/>
+      </div>
+      <div className='allRightsReserved'>
+        <AllRightsReserved/>
       </div>
     </div>
   );
