@@ -1,0 +1,39 @@
+/* Map.css */
+.map-frame {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto; /* Center on the page */
+    padding: 20px;
+    border-radius: 10px; /* Slightly softer corners */
+    background: rgba(0, 0, 0, 0.8); /* Less transparent, darker black */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* More intense shadow */
+  }
+  
+  .map-header {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #12253d; /* A solid color for better contrast (blue) */
+    border-radius: 6px; /* Softer corners */
+    padding: 15px;
+  }
+  
+  .map-header h2 {
+    margin: 0;
+    color: #ffffff; /* White for contrast */
+    font-size: 32px; /* Larger font size */
+    font-family: 'Arial', sans-serif; /* Change to a more legible font */
+    font-weight: bold;
+  }
+  
+  .map-header p {
+    margin: 8px 0;
+    color: #f1f1f1; /* Light gray */
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .map-container iframe {
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+  }
+  
