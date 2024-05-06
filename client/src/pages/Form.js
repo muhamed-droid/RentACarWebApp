@@ -14,11 +14,16 @@ const fetchVehicles = async () => {
   }
 };
 
-const RentForm = ({ onSubmit }) => {
+const RentForm = () => {
   const [showAdditionalForm, setShowAdditionalForm] = useState(false);
   const [submissionComplete, setSubmissionComplete] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [vehicles, setVehicles] = useState([]);
+  const [initialFormValues, setInitialFormValues] = useState({
+    startDate: '',
+    endDate: '',
+    vehicle: ''
+  });
 
   useEffect(() => {
     const getVehicles = async () => {
@@ -28,22 +33,41 @@ const RentForm = ({ onSubmit }) => {
     getVehicles();
   }, []);
 
-  const handleFinalSubmit = (values, { setSubmitting }) => {
-    //onSubmit(values);
-    //setShowAdditionalForm(false); // Zatvara drugu formu
-    //setSubmissionComplete(true); // Pokazuje popup
+  const handleFinalSubmit = async (values, { setSubmitting }) => {
+    //setSubmitting(true);
+
+    // Merge both forms' data
+    const finalValues = {
+      ...initialFormValues,
+      ...values
+    };
+  
+    try {
+      const response = await fetch('http://localhost:3001/sendemail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(finalValues)
+      });
+  
+      if (response.ok) {
+        alert('Email sent successfully!');
+      } else {
+        alert('Failed to send email.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred while sending the email.');
+    }
+  
     //setSubmitting(false);
+    //setShowAdditionalForm(false);
   };
 
   return (
     <div className="form-container">
       <h2>Rent a Car</h2>
       <Formik
-        initialValues={{
-          startDate: '',
-          endDate: '',
-          vehicle: ''
-        }}
+        initialValues={initialFormValues}
         validationSchema={Yup.object().shape({
           startDate: Yup.date().required('Start date is required'),
           endDate: Yup.date()
@@ -52,10 +76,11 @@ const RentForm = ({ onSubmit }) => {
           vehicle: Yup.string().required('Vehicle is required')
         })}
         onSubmit={(values, { setSubmitting }) => {
+          setInitialFormValues(values);
+
           if (!showAdditionalForm) {
-            //setSubmissionComplete(false);
             setShowAdditionalForm(true);
-            //setSubmitting(false);
+            setSubmitting(false);
           } else {
             handleFinalSubmit(values, { setSubmitting });
           }
@@ -101,7 +126,6 @@ const RentForm = ({ onSubmit }) => {
             type="button"
             onClick={() => {
               setShowAdditionalForm(false);
-              //setSubmissionComplete(false);
             }}
             className="close-button"
           >
@@ -121,11 +145,7 @@ const RentForm = ({ onSubmit }) => {
               email: Yup.string().email('Invalid email').required('Email is required'),
               number: Yup.string().required('Number is required')
             })}
-            onSubmit={(values, { setSubmitting }) => {
-              setShowAdditionalForm(false);
-              setSubmissionComplete(true);
-              //handleFinalSubmit(values, { setSubmitting });
-            }}
+            onSubmit={handleFinalSubmit}
           >
             {() => (
               <Form>
@@ -167,9 +187,7 @@ const RentForm = ({ onSubmit }) => {
           <p>Submission Complete! Your request has been successfully sent.</p>
           <button
             type="button"
-            onClick={() => {
-              setSubmissionComplete(false);
-            }}
+            onClick={() => setSubmissionComplete(false)}
             className="close-button"
           >
             OK
