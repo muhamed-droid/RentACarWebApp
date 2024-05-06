@@ -24,7 +24,7 @@ function Test() {
           <div className="contact-info">
           <p><FaPhone /> <a className="link" href="tel:+436607700543">+436607700543</a></p>
           <p><FaPhone /> <a className="link" href="tel:+436603135530">+436603135530</a></p>
-          <p><FaEnvelope /> <a className="link" href="mailto:info@example.com">info@example.com</a></p>
+          <p><FaEnvelope /> <a className="link" href="matorugadino17@gmail.com">matorugadino17@gmail.com</a></p>
           </div>
         </header>
 
