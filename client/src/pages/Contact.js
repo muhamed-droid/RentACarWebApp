@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './css/Contact.css';
 import Navbar from './Navbar';
 import './css/Home.css';
+import Map from './Map';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -95,6 +96,9 @@ const Contact = () => {
           <p>Thank you for your message!</p>
         </div>
       )}
+    </div>
+    <div className='google-map'>
+      <Map/>
     </div>
     </div>
   );

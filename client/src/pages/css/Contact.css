@@ -12,14 +12,14 @@
     margin-left: 25%;
     max-width: 600px;
     padding: 30px;
-    background-color: #f9f9f9;
+    background-color: #f0eaeade;
     border-radius: 8px;
   }
   
   .contact-us-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #141313;
   }
   
   .form-group {
@@ -30,7 +30,7 @@
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #666;
+    color: #0e0d0d;
   }
   
   input[type="text"],
@@ -38,7 +38,7 @@
   textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc8e;
     border-radius: 5px;
     font-size: 16px;
   }
