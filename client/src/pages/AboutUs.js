@@ -12,8 +12,8 @@ const AboutUs = () => {
         <Navbar></Navbar>
       </div>
       <div className="hero">
-        <h1>Welcome to Our Company</h1>
-        <p>Learn more about our mission, vision, and values.</p>
+        <h1>Willkommen im KFZ Hampi</h1>
+        <p>Erfahren Sie mehr über unsere Mission, Vision und Werte.</p>
       </div>
 
       <div className="team">
