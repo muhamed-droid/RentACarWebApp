@@ -2,7 +2,7 @@
 
 /* Header Styles */
 .header {
-    background-color: 	rgb(15, 51, 87);
+    background-color: rgb(10, 10, 28);
     color: #fff;
     padding: 10px;
     margin-left: 0px;
@@ -22,7 +22,7 @@
   }
   
   .logo img {
-    height: 80px; /* Adjust the width of the logo */
+    height: 160px; /* Adjust the width of the logo */
   }
   
   .link{
