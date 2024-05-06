@@ -42,6 +42,7 @@
   }
   
   button:disabled {
+    cursor: not-allowed;
     background-color: #ccc;
   }
   
@@ -125,6 +126,11 @@
     z-index: 100;
     border: 1px solid black;
     border-radius: 5px;
+  }
+
+  .invalid-date{
+    border: 2px solid red;
+    background-color: #ffe6e6;
   }
   
 

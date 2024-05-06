@@ -33,6 +33,8 @@ const RentForm = () => {
     getVehicles();
   }, []);
 
+  const today = new Date().toISOString().split('T')[0];
+
   const handleFinalSubmit = async (values, { setSubmitting }) => {
     //setSubmitting(true);
 
@@ -69,10 +71,12 @@ const RentForm = () => {
       <Formik
         initialValues={initialFormValues}
         validationSchema={Yup.object().shape({
-          startDate: Yup.date().required('Start date is required'),
+          startDate: Yup.date()
+            .min(today, 'Start date cannot be before today')
+            .required('Start date is required'),
           endDate: Yup.date()
-            .required('End date is required')
-            .min(Yup.ref('startDate'), 'End date must be after start date'),
+            .min(Yup.ref('startDate'), 'End date must be after start date')
+            .required('End date is required'),
           vehicle: Yup.string().required('Vehicle is required')
         })}
         onSubmit={(values, { setSubmitting }) => {
@@ -86,17 +90,27 @@ const RentForm = () => {
           }
         }}
       >
-        {() => (
+        {({ errors, touched }) => (
           <Form>
             <div className="form-group">
               <label htmlFor="startDate">Start Date</label>
-              <Field type="date" name="startDate" />
+              <Field
+                type="date"
+                name="startDate"
+                min={today} // Prevent past dates selection
+                className={errors.startDate && touched.startDate ? 'invalid-date' : ''}
+              />
               <ErrorMessage name="startDate" component="div" className="error" />
             </div>
 
             <div className="form-group">
               <label htmlFor="endDate">End Date</label>
-              <Field type="date" name="endDate" />
+              <Field
+                type="date"
+                name="endDate"
+                min={today} // Prevent past dates selection
+                className={errors.endDate && touched.endDate ? 'invalid-date' : ''}
+              />
               <ErrorMessage name="endDate" component="div" className="error" />
             </div>
 
