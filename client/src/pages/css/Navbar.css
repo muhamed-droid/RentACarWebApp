@@ -5,8 +5,12 @@
     background-color: rgb(10, 10, 28);
     color: #fff;
     padding: 10px;
-    margin-left: 0px;
+    margin: auto;
     display: flex;
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(12, 7, 42);
+    padding: 10px;
     align-items: center;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif; /* Change the font */
@@ -22,7 +26,7 @@
   }
   
   .logo img {
-    height: 160px; /* Adjust the width of the logo */
+    height: 110px; /* Adjust the width of the logo */
   }
   
   .link{
