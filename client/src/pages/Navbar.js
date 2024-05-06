@@ -6,6 +6,7 @@ import Logo from '../photos/logo.png'
 
 import './css/Navbar.css'
 
+//<li><Link to="/info">Info</Link></li>
 function Test() {
   return (
     <div className="App">
@@ -18,7 +19,6 @@ function Test() {
               <li><Link to="/">Homepage</Link></li>
               <li><Link to="/aboutUs">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/info">Info</Link></li>
             </ul>
           </nav>
           <div className="contact-info">

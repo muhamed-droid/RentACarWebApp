@@ -1,0 +1,68 @@
+/* ContactUs.css */
+
+.contact {
+    background: url('../../photos/background.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+
+.contact-us-container {
+    margin-top: 10%;
+    margin-left: 25%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .contact-us-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
