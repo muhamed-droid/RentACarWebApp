@@ -22,7 +22,7 @@ function Vehicle() {
             <p>Fuel Type: {vehicleObject.type_of_fuel}</p>
             <p>Transmission: {vehicleObject.transmission}</p>
             <p>Kilometer: {vehicleObject.kilometer}</p>
-            <p>Price: {vehicleObject.price}</p>
+            <p>Price: {vehicleObject.price} €/tag</p>
             <p>Additional Description: {vehicleObject.additional_description}</p>
             <img src={`photos/${vehicleObject.image_name}`} alt="Vehicle" />
           </div>

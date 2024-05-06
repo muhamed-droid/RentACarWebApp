@@ -1,8 +1,6 @@
 /* Stilizacija Home komponente */
 
 .vozila {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 10%;
     color: rgb(226, 217, 208);
@@ -50,3 +48,58 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+  .sort-buttons {
+    margin-top: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .sort-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sort-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .vehicle-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px; 
+    display: grid;
+  }
+  
+  .vehicle-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .vehicle-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.filter select {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.filter label {
+  margin-right: 10px;
+  color: #ccc;
+}
+
+
+  
