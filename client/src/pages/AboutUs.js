@@ -2,7 +2,8 @@
 import React from 'react';
 import './css/AboutUs.css'; // Make sure to create this CSS file
 import Navbar from './Navbar';
-import Dino from '../photos/Dino.jpg'
+import Dino from '../photos/Dino.jpg';
+import Map from './Map.js';
 
 const AboutUs = () => {
   return (
@@ -25,6 +26,9 @@ const AboutUs = () => {
           </div>
           {/* Repeat for other team members */}
         </div>
+      </div>
+      <div className='google-map'>
+        <Map/>
       </div>
     </div>
   );
