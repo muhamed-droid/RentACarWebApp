@@ -1,19 +1,21 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors=require('cors');
 
 const db = require('./models');
 
+//Middleware
 app.use(cors());
 app.use(express.json());
 
 //Routers 
 
+const sendEmailRouter = require ('./routes/SendEmail');
 const vehiclesRouter = require ('./routes/Vehicles');
-const vehicleRouter = require ('./routes/Vehicles');
 
 app.use("/vehicles", vehiclesRouter);
-app.use("/vehicle", vehicleRouter);
+app.use("/sendemail", sendEmailRouter);
 
 
 db.sequelize.sync().then(() => {
