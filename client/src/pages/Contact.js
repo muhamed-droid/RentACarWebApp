@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import './css/Contact.css'; // Stilizacija može biti u odvojenom CSS fajlu
+import './css/Contact.css';
 import Navbar from './Navbar';
-import './css/Home.css'
+import './css/Home.css';
 
-const ContactUs = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,61 +20,84 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ovdje možeš implementirati logiku slanja forme (npr. poziv API-ju za slanje emaila)
-    console.log(formData);
-    // Nakon što se forma pošalje, možeš očistiti polja forme
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    setSubmitting(true);
+    try {
+      const response = await fetch('http://localhost:3001/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        alert('Email sent successfully!');
+      } else {
+        alert('Failed to send email.');
+      }
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An error occurred while sending the email.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <div className='contact'>
-        <Navbar />
+      <Navbar />
     <div className="contact-us-container">
       <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+      {!submitted ? (
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit" disabled={submitting}>Submit</button>
+        </form>
+      ) : (
+        <div className="submitted-message">
+          <p>Thank you for your message!</p>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      )}
     </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default Contact;

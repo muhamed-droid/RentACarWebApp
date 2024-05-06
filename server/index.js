@@ -13,9 +13,11 @@ app.use(express.json());
 
 const sendEmailRouter = require ('./routes/SendEmail');
 const vehiclesRouter = require ('./routes/Vehicles');
+const contactRouter = require ('./routes/ContactUs');
 
 app.use("/vehicles", vehiclesRouter);
 app.use("/sendemail", sendEmailRouter);
+app.use("/contact", contactRouter);
 
 
 db.sequelize.sync().then(() => {
