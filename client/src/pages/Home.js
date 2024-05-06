@@ -6,6 +6,9 @@ import Modal from '../Modal.js';
 import './css/Home.css';
 import Form from './Form.js';
 import Map from './Map.js';
+import AllRightsReserved from './AllRightsReserved.js';
+import FAQ from './FAQ.js';
+import ButtonToTop from './ButtonToTop.js';
 
 function Home() {
   const [listOfVehicles, setListOfVehicles] = useState([]);
@@ -48,8 +51,17 @@ function Home() {
         <div className='form'>
           <Form></Form>
         </div>
+        <div>
+          <ButtonToTop/>
+        </div>
+        <div className='FAQ'>
+          <FAQ/>
+        </div>
         <div className="google-map"> 
           <Map></Map>
+        </div>
+        <div className='allRightsReserved'>
+          <AllRightsReserved/> 
         </div>
       </div>
     </div>

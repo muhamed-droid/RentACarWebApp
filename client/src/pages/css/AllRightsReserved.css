@@ -1,0 +1,18 @@
+/* AllRightsReserved.css */
+
+.all-rights-reserved p {
+    animation: blink 3s infinite alternate; /* Dodaj animaciju treptanja */
+    font-size: larger;
+    background-color: #52e6e14a;
+    height: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 25px;
+    
+  }
+  
+  @keyframes blink {
+    0% { color: #fff; }
+    100% { color: #cb440b; }
+  }
+  
