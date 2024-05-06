@@ -5,13 +5,14 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 10%;
+    color: rgb(226, 217, 208);
   }
   
   .vehicle-card {
     width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px;
+    border: 1px solid #e2e3e576;
+    border-radius: 10px;
+    margin: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -24,8 +25,8 @@
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
-    background-color: #f0f0f0;
-    border-bottom: 1px solid #ccc;
+    background-color: #f0f0f054;
+    border-bottom: 1px solid #f3eeee05;
   }
   
   .body {
@@ -35,17 +36,17 @@
   .vehicle-card .price {
     font-weight: bold;
     padding: 10px;
-    background-color: #f0f0f0;
-    border-top: 1px solid #ccc;
+    background-color: #f0f0f067;
+    border-top: 1px solid #dddddde8;
   }
   
   /* Dodatne stilizacije za slike */
   
   .vehicle-card .vehicle-image {
-    background-color: #f0f0f0;
+    background-color: #f0f0f000;
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: fill;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
