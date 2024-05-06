@@ -37,7 +37,7 @@
   input[type="text"],
   input[type="email"],
   textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #cccccc8e;
     border-radius: 5px;
