@@ -1,8 +1,19 @@
 /* FAQ.css */
 
+.question-box {
+  margin-top: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.704);
+  padding: 10px;
+  background-color: #f9f9f9cc;
+  display: inline-block;
+
+}
+
+
 .faq-container {
     max-width: 600px;
     margin: 0 auto;
+    
   }
   
   .faq {

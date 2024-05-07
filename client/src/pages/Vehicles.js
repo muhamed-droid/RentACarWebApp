@@ -47,6 +47,9 @@ function Vehicles({ onVehicleClick }) {
 
   return (
     <div className='vozila'>
+
+       <h2 class="question-box">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</h2>
+
       <div className="sort-buttons">
         <button className="sort-button" onClick={() => sortBy('price')}>Sort by Price</button>
         <button className="sort-button" onClick={() => sortBy('manufacturer')}>Sort by Name</button>
