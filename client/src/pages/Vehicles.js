@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import './css/Vehicles.css'; // Ensure the path matches your project structure
+import './css/Vehicles.css'; // Provjeri da li je putanja ispravna
+import Form from './Form.js';
 
 function Vehicles({ onVehicleClick }) {
   const [vehiclesState, setVehiclesState] = useState([]);
@@ -13,7 +14,7 @@ function Vehicles({ onVehicleClick }) {
   const [selectedSortKey, setSelectedSortKey] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/vehicles`).then((response)=> { 
+    axios.get(`http://localhost:3001/vehicles`).then((response) => {
       setVehiclesState(response.data);
     });
   }, []);
@@ -50,16 +51,23 @@ function Vehicles({ onVehicleClick }) {
           {filteredVehicles.map((value, key) => (
             <div className="vehicle-card" onClick={() => onVehicleClick(value)} key={key}>
               <div className="name">{value.manufacturer}</div>
-              <div className="model">{value.model}</div>  
+              <div className="model">{value.model}</div>
               <div className="description">{value.description}</div>
               <div className="price">{value.price} €/tag</div>
               <img src={`./photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
             </div>
-
           ))}
         </div>
       </div>
       <div className="right-content">
+        <div className="filter">
+          <select id="model" onChange={handleModelFilterChange}>
+            <option value="">All Models</option>
+            {uniqueModels.map((model, index) => (
+              <option key={index} value={model}>{model}</option>
+            ))}
+          </select>
+        </div>
         <div className="sort-container">
           <button className="sort-button" onClick={toggleSortOptions}>Sort by</button>
           {showSortOptions && (
@@ -73,13 +81,8 @@ function Vehicles({ onVehicleClick }) {
             </div>
           )}
         </div>
-        <div className="filter">
-          <select id="model" onChange={handleModelFilterChange}>
-            <option value="">Alle Modelle</option>
-            {uniqueModels.map((model, index) => (
-              <option key={index} value={model}>{model}</option>
-            ))}
-          </select>
+        <div className='form'>
+          <Form />
         </div>
       </div>
     </div>

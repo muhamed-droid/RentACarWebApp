@@ -53,6 +53,7 @@ const RentForm = () => {
   
       if (response.ok) {
         alert('Email sent successfully!');
+        setSubmissionComplete(true);
       } else {
         alert('Failed to send email.');
       }
@@ -201,7 +202,10 @@ const RentForm = () => {
           <p>Submission Complete! Your request has been successfully sent.</p>
           <button
             type="button"
-            onClick={() => setSubmissionComplete(false)}
+            onClick={() => {setSubmissionComplete(false);
+              
+            setShowAdditionalForm(false);}
+            }
             className="close-button"
           >
             OK
