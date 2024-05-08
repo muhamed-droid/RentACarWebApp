@@ -3,11 +3,12 @@
 .question-box {
   font-size: 16px;
   color: #000000ea;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 5px 0;
   text-align: center;
   background-color: #ffffffee;
   font-size: 24px;
+  border-color: #000000;
 }
 
 .faq-container {

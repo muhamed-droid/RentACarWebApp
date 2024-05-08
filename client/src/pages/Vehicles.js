@@ -46,6 +46,9 @@ function Vehicles({ onVehicleClick }) {
 
   return (
     <div className='vozila'>
+      <div className="title-vozila"> Wagen </div>
+      <div className="vehicle-form">
+
       <div className="left-content">
         <div className="vehicle-cards">
           {filteredVehicles.map((value, key) => (
@@ -84,6 +87,9 @@ function Vehicles({ onVehicleClick }) {
           <Form />
         </div>
       </div>
+
+      </div>
+      
     </div>
   );
 }

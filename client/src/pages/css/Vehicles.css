@@ -2,8 +2,11 @@
 .vozila {
   display: flex;
   justify-content: space-between;
-  margin-top: 5%;
+  margin-top: -1%;
   color: rgb(16, 15, 14);
+  background-color: rgba(255, 255, 255, 0.938);
+  padding-top: 3%;
+  flex-direction: column;
 }
 
 .form{
@@ -12,7 +15,7 @@
 }
 
 .left-content {
-  width: 70%;
+  width: 80%;
   padding-right: 20px;
   min-height: 800px;
 }
@@ -32,10 +35,10 @@
 }
   
   .vehicle-card {
-    width: 300px;
+    max-width: 300px;
     border: 1px solid #d7dce7aa;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -142,7 +145,7 @@
 
 .vehicle-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, calc(50% / 2))); /* Adjust as needed */
+  grid-template-columns: repeat(auto-fill, minmax(280px, calc(50% / 2))); /* Adjust as needed */
   grid-auto-rows: minmax(100px, auto); /* Adjust row height as needed */
   gap: 20px; /* Adjust gap between grid items */
 }
@@ -168,4 +171,16 @@
 
 .sort-options{
   margin-right: 20px;
+}
+
+.title-vozila{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.vehicle-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
