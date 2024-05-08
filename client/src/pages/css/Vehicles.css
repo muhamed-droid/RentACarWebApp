@@ -1,9 +1,14 @@
-/* Stilizacija Home komponente */
+/*Stilizacija Home komponente */
 .vozila {
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 15%;
   color: rgb(16, 15, 14);
+}
+
+.form{
+  margin-left: 5%;
+  margin-top: auto;
 }
 
 .left-content {
@@ -12,11 +17,10 @@
 }
 
 .right-content {
+  margin-top: 2%;
   width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 20px;
 }
 
 .question-box {
@@ -57,9 +61,6 @@
     background-color: #f0f0f067;
     border-top: 1px solid #dddddde8;
   }
-  
-  /* Dodatne stilizacije za slike */
-  
   .vehicle-card .vehicle-image {
     background-color: #f0f0f000;
     width: 100%;
@@ -69,15 +70,15 @@
     border-top-right-radius: 5px;
   }
   .sort-container {
-    margin-top: 20px;
+    margin: 20px;
+    margin-top: 70px;
     height: 50px;
     width: 150px;
     margin-left: 1200px;
     background-position-x: right;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-
+  }
 .vehicle-card {
   width: 300px;
   border: 1px solid #d7dce7aa;
@@ -128,7 +129,7 @@
   color: #fff;
   border: none;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -139,9 +140,10 @@
 
 .vehicle-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, calc(50% / 2))); /* Adjust as needed */
-  grid-auto-rows: minmax(100px, auto); /* Adjust row height as needed */
-  gap: 20px; /* Adjust gap between grid items */
+  grid-template-columns: repeat(auto-fill, minmax(300px, calc(50% / 2)));
+  grid-auto-rows: minmax(100px, auto); 
+  gap: 20px;
+}
 .header-image {
   width: 100%;
   height: 600px;
@@ -159,4 +161,8 @@
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   border-radius: 8px;
+}
+
+.sort-options{
+  margin-right: 20px;
 }
