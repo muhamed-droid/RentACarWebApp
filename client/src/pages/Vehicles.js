@@ -78,9 +78,8 @@ function Vehicles({ onVehicleClick }) {
         )}
       </div>
       <div className="filter">
-        <label htmlFor="model">Model:</label>
         <select id="model" onChange={handleModelFilterChange}>
-          <option value="">All Models</option>
+          <option value="">Alle Modelle</option>
           {uniqueModels.map((model, index) => (
             <option key={index} value={model}>{model}</option>
           ))}
