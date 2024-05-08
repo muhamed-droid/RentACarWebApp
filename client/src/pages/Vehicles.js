@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import './css/Vehicles.css';
+import './css/Vehicles.css'; // Ensure the path matches your project structure
 
 function Vehicles({ onVehicleClick }) {
   const [vehiclesState, setVehiclesState] = useState([]);
@@ -43,58 +43,44 @@ function Vehicles({ onVehicleClick }) {
     setModelFilter(event.target.value);
   };
 
-  const toggleSortOptionsByKey = (key) => {
-    setSelectedSortKey(key);
-    setShowSortOptions(true);
-  };
-
-  const sortedVehicles = [...filteredVehicles].sort((a, b) => {
-    if (sortConfig.direction === 'ascending') {
-      return a[sortConfig.key] < b[sortConfig.key] ? -1 : 1;
-    } else {
-      return a[sortConfig.key] > b[sortConfig.key] ? -1 : 1;
-    }
-  });
-
   return (
     <div className='vozila'>
+      <div className="left-content">
+        <div className="vehicle-cards">
+          {filteredVehicles.map((value, key) => (
+            <div className="vehicle-card" onClick={() => onVehicleClick(value)} key={key}>
+              <div className="name">{value.manufacturer}</div>
+              <div className="model">{value.model}</div>  
+              <div className="description">{value.description}</div>
+              <div className="price">{value.price} €/tag</div>
+              <img src={`./photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
+            </div>
 
-  <div className="header-image">
-    <div className="header-text">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</div>
-  </div>
-
-
-      <div className="sort-container">
-        <button className="sort-button" onClick={toggleSortOptions}>Sort by</button>
-        {showSortOptions && (
-          <div className="sort-options">
-            <button className="sort-option" onClick={() => sortBy('price', 'ascending')}>Price (Ascending)</button>
-            <button className="sort-option" onClick={() => sortBy('price', 'descending')}>Price (Descending)</button>
-            <button className="sort-option" onClick={() => sortBy('manufacturer', 'ascending')}>Name (Ascending)</button>
-            <button className="sort-option" onClick={() => sortBy('manufacturer', 'descending')}>Name (Descending)</button>
-            <button className="sort-option" onClick={() => sortBy('year', 'ascending')}>Year (Ascending)</button>
-            <button className="sort-option" onClick={() => sortBy('year', 'descending')}>Year (Descending)</button>
-          </div>
-        )}
-      </div>
-      <div className="filter">
-        <select id="model" onChange={handleModelFilterChange}>
-          <option value="">Alle Modelle</option>
-          {uniqueModels.map((model, index) => (
-            <option key={index} value={model}>{model}</option>
           ))}
-        </select>
+        </div>
       </div>
-      <div className="vehicle-cards">
-        {sortedVehicles.map((value, key) => (
-          <div className="vehicle-card" onClick={() => onVehicleClick(value)} key={key}>
-            <div className="name">{value.manufacturer}</div>
-            <div className="model">{value.model}</div>  
-            <div className="description">{value.description}</div>
-            <div className="price">{value.price} €/tag</div>
-            <img src={`./photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
-          </div>
-        ))}
+      <div className="right-content">
+        <div className="sort-container">
+          <button className="sort-button" onClick={toggleSortOptions}>Sort by</button>
+          {showSortOptions && (
+            <div className="sort-options">
+              <button className="sort-option" onClick={() => sortBy('price', 'ascending')}>Price (Ascending)</button>
+              <button className="sort-option" onClick={() => sortBy('price', 'descending')}>Price (Descending)</button>
+              <button className="sort-option" onClick={() => sortBy('manufacturer', 'ascending')}>Name (Ascending)</button>
+              <button className="sort-option" onClick={() => sortBy('manufacturer', 'descending')}>Name (Descending)</button>
+              <button className="sort-option" onClick={() => sortBy('year', 'ascending')}>Year (Ascending)</button>
+              <button className="sort-option" onClick={() => sortBy('year', 'descending')}>Year (Descending)</button>
+            </div>
+          )}
+        </div>
+        <div className="filter">
+          <select id="model" onChange={handleModelFilterChange}>
+            <option value="">Alle Modelle</option>
+            {uniqueModels.map((model, index) => (
+              <option key={index} value={model}>{model}</option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   );
