@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        lkw:{
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
         year:{
             type: DataTypes.INTEGER,
             allowNull: false
@@ -16,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        transmission:{
-            type: DataTypes.STRING,
+        automatic:{
+            type: DataTypes.BOOLEAN,
             allowNull: false,
         },
         kilometer:{
