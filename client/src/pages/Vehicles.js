@@ -55,6 +55,7 @@ function Vehicles({ onVehicleClick }) {
               <div className="price">{value.price} €/tag</div>
               <img src={`./photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
             </div>
+
           ))}
         </div>
       </div>

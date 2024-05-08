@@ -1,18 +1,21 @@
 /* AllRightsReserved.css */
 
-.all-rights-reserved p {
-    animation: blink 3s infinite alternate; /* Dodaj animaciju treptanja */
-    font-size: larger;
-    background-color: #52e6e14a;
-    height: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 25px;
-    
-  }
-  
-  @keyframes blink {
-    0% { color: #fff; }
-    100% { color: #cb440b; }
-  }
-  
+.all-rights-reserved {
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-size: medium;
+}
+
+.all-rights-reserved a {
+  color: #fff;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.all-rights-reserved a:hover {
+  color: #cb440b; /* Promijenite boju hover-a prema želji */
+}
