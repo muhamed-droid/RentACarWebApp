@@ -1,0 +1,84 @@
+.footer {
+    display: flex;
+    justify-content: space-between; /* Equal space between columns */
+    align-items: center; /* Center vertically */ 
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+
+.footer div {
+    flex: 1;
+    text-align: center;
+}
+
+.history-section {
+    max-width: 25%;
+    padding-left: 50px;
+}
+
+.address-section i {
+    margin-right: 10px;
+}
+
+.address-section {
+    padding-left: 120px;
+}
+
+.quick-links h4 {
+    margin-bottom: 10px;
+
+}
+
+.quick-links{
+    font-size: 18px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    position: relative; /* Ensures the absolute positioning of the arrow is relative to the link */
+    padding-right: 20px; /* Provides space for the arrow */
+}
+
+.quick-links li a {
+    color: #e2e2e2;
+    text-decoration: none;
+    padding-left: 7%;
+}
+
+.quick-links li a::before {
+    content: '→'; /* Represents the arrow */
+    position: absolute;
+    left: 30%; /* Positions the arrow to the far right of the link */
+    top: 0; /* Aligns the arrow at the top of the link */
+}
+
+.quick-links li a:hover {
+    text-decoration: underline;
+}
+
+.small-logo img{
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto 10px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-name{
+    font-size: 20px;
+    padding-left: 0;
+    margin-left: 0;
+}

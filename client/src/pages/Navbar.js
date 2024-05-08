@@ -1,6 +1,6 @@
 import { FaPhone, FaEnvelope } from 'react-icons/fa'; // Import icons
 
-import { Link } from 'react-router-dom'
+import ScrollToTopLink from './ScrollToTopLink.js'; 
 
 import Logo from '../photos/logo.png'
 
@@ -15,11 +15,11 @@ function Test() {
             <img src={Logo} alt="Logo" />
           </div>
           <nav className="menu">
-            <ul>
-              <li><Link to="/">Homepage</Link></li>
-              <li><Link to="/aboutUs">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
+          <ul>
+            <li><ScrollToTopLink to="/">Homepage</ScrollToTopLink></li>
+            <li><ScrollToTopLink to="/aboutUs">About Us</ScrollToTopLink></li>
+            <li><ScrollToTopLink to="/contact">Contact</ScrollToTopLink></li>
+          </ul>
           </nav>
           <div className="contact-info">
           <p><FaPhone /> <a className="link" href="tel:+436607700543">+436607700543</a></p>
