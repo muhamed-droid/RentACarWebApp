@@ -1,20 +1,34 @@
-/* Stilizacija Home komponente */
-
-
-
+/*Stilizacija Home komponente */
 .vozila {
-    justify-content: space-around;
-    margin-top: 3%;
-    color: rgb(16, 15, 14);
-  }
-  
-  .question-box {
-    margin-top: 20px;
-    border: 2px solid rgba(73, 67, 92, 0);
-    padding: 10px;
-    background-color: #1b102ccc;
-  
-  }
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  color: rgb(16, 15, 14);
+}
+
+.form{
+  margin-left: 5%;
+  margin-top: auto;
+}
+
+.left-content {
+  width: 70%;
+  padding-right: 20px;
+}
+
+.right-content {
+  margin-top: 2%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-box {
+  margin-top: 20px;
+  border: 2px solid rgba(73, 67, 92, 0);
+  padding: 10px;
+  background-color: #1b102ccc;
+}
   
   .vehicle-card {
     width: 300px;
@@ -47,9 +61,6 @@
     background-color: #f0f0f067;
     border-top: 1px solid #dddddde8;
   }
-  
-  /* Dodatne stilizacije za slike */
-  
   .vehicle-card .vehicle-image {
     background-color: #f0f0f000;
     width: 100%;
@@ -59,101 +70,81 @@
     border-top-right-radius: 5px;
   }
   .sort-container {
-    margin-top: 20px;
+    margin: 20px;
+    margin-top: 70px;
     height: 50px;
     width: 150px;
     margin-left: 1200px;
     background-position-x: right;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-
-  }
-  .sort-buttons {
-    margin-top: 150px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .sort-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .sort-button:hover {
-    background-color: #0056b3;
-  }
-  
-  
-  .vehicle-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, calc(50% / 2))); /* Adjust as needed */
-    grid-auto-rows: minmax(100px, auto); /* Adjust row height as needed */
-    gap: 20px; /* Adjust gap between grid items */
-  }
-  
-  .vehicle-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .vehicle-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-.filter select {
-  width: 130px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  margin-left: -1200px;
-  margin-top: 0px;
-  margin-bottom: 50px;
-  border-radius: 4px;
-  font-size: 16px;
-  outline: none;
+.vehicle-card {
+  width: 300px;
+  border: 1px solid #d7dce7aa;
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.filter label {
-  margin-right: 10px;
-  color: #ccc;
-}
-.left-content {
-  width: 70%; /* Adjust as needed */
+.vehicle-card:hover {
+  transform: scale(1.05);
 }
 
-.right-content {
-  display: flex;
-  justify-content: flex-end; /* Align content to the right */
+.vehicle-card .name, .model {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #fdf9f974;
+  border-bottom: 1px solid #f3eeee05;
 }
 
-.header-image {
+.vehicle-card .price {
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f0f0f067;
+  border-top: 1px solid #dddddde8;
+}
+
+.vehicle-card .vehicle-image {
+  background-color: #f0f0f000;
   width: 100%;
-  height: 300px;
-  background: url('../../photos/front-image.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
+  height: 200px;
+  object-fit: fill;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.sort-container, .filter {
+  margin-left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
-.header-text {
-  color: white;
-  font-size: 28px;
-  background: rgba(0, 0, 0, 0.6);
+.sort-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
   padding: 10px 20px;
-  border-radius: 8px;
+  margin: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+.sort-button:hover {
+  background-color: #0056b3;
+}
+
+.vehicle-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, calc(50% / 2))); /* Adjust as needed */
+  grid-auto-rows: minmax(100px, auto); /* Adjust row height as needed */
+  gap: 20px; /* Adjust gap between grid items */
+}
 .header-image {
   width: 100%;
   height: 600px;
@@ -165,10 +156,15 @@
   align-items: center;
 }
 
+
 .header-text {
   color: white;
   font-size: 28px;
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   border-radius: 8px;
+}
+
+.sort-options{
+  margin-right: 20px;
 }

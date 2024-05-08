@@ -10,6 +10,7 @@ import AllRightsReserved from './AllRightsReserved.js';
 import FAQ from './FAQ.js';
 import ButtonToTop from './ButtonToTop.js';
 import Footer from './Footer.js';
+import naslovna from '../photos/naslovna.jpg';
 
 function Home() {
   const [listOfVehicles, setListOfVehicles] = useState([]);
@@ -33,9 +34,15 @@ function Home() {
 
 
   return (
+  
+
     <div className='home-container'>
       <Navbar />
       <div className='home-content'>
+
+      <img className='naslovna-img' src={naslovna} alt="Naslovna"/>
+    
+      
         <Vehicles vehicles={listOfVehicles} onVehicleClick={handleVehicleClick} />
         {selectedVehicle && (
           <Modal show={true} handleClose={handleCloseModal}>
@@ -49,9 +56,6 @@ function Home() {
             <img className="slika" src={`photos/${selectedVehicle.image_name}`} alt="Vehicle" />
           </Modal>
         )}
-        <div className='form'>
-          <Form></Form>
-        </div>
         <div>
           <ButtonToTop/>
         </div>
