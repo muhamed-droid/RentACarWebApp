@@ -59,7 +59,10 @@ function Vehicles({ onVehicleClick }) {
   return (
     <div className='vozila'>
 
-       <h2 className="question-box">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</h2>
+  <div className="header-image">
+    <div className="header-text">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</div>
+  </div>
+
 
       <div className="sort-container">
         <button className="sort-button" onClick={toggleSortOptions}>Sort by</button>
