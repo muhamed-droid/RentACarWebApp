@@ -40,7 +40,6 @@ function Home() {
       <Navbar />
       <div className='home-content'>
 
-      <img className='naslovna-img' src={naslovna} alt="Naslovna"/>
     
       
         <Vehicles vehicles={listOfVehicles} onVehicleClick={handleVehicleClick} />
@@ -56,6 +55,7 @@ function Home() {
             <img className="slika" src={`photos/${selectedVehicle.image_name}`} alt="Vehicle" />
           </Modal>
         )}
+      <img className='naslovna-img' src={naslovna} alt="Naslovna"/>
         <div>
           <ButtonToTop/>
         </div>
