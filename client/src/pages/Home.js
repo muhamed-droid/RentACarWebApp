@@ -55,9 +55,6 @@ function Home() {
             <img className="slika" src={`photos/${selectedVehicle.image_name}`} alt="Vehicle" />
           </Modal>
         )}
-        <div className='form'>
-          <Form></Form>
-        </div>
         <div>
           <ButtonToTop/>
         </div>

@@ -1,7 +1,7 @@
 .form-container {
-    max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
     margin-top: 3%;
+    width: 80%;
     padding: 20px;
     border: 1px solid #cccccc20;
     border-radius: 5px;
@@ -52,6 +52,7 @@
 
   /* Adjusted styles for the additional form */
 .additional-form-container {
+  margin-top: 100px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -123,6 +124,7 @@
 }
 
   .popup {
+    margin-top: 100px;
     position: fixed;
     top: 50%;
     left: 50%;
