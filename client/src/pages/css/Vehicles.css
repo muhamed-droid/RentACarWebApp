@@ -4,7 +4,7 @@
 
 .vozila {
     justify-content: space-around;
-    margin-top: 10%;
+    margin-top: 3%;
     color: rgb(16, 15, 14);
   }
   
@@ -154,4 +154,21 @@
   border-radius: 8px;
 }
 
-  
+.header-image {
+  width: 100%;
+  height: 600px;
+  background: url('../../photos/front-image.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  color: white;
+  font-size: 28px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+}

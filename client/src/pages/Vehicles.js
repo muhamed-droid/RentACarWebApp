@@ -59,9 +59,9 @@ function Vehicles({ onVehicleClick }) {
   return (
     <div className='vozila'>
 
-<div className="header-image">
-  <div className="header-text">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</div>
-</div>
+  <div className="header-image">
+    <div className="header-text">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</div>
+  </div>
 
 
       <div className="sort-container">
