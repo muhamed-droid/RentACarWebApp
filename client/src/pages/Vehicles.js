@@ -6,8 +6,8 @@ import Form from './Form.js';
 function Vehicles({ onVehicleClick }) {
   const [vehiclesState, setVehiclesState] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
+  const [filter, setFilter] = useState('');
   const [modelFilter, setModelFilter] = useState('');
-  const [uniqueModels, setUniqueModels] = useState([]);
   const [filteredVehicles, setFilteredVehicles] = useState([]);
   const [showSortOptions, setShowSortOptions] = useState(false);
   const [selectedSort, setSelectedSort] = useState(null);
@@ -20,14 +20,18 @@ function Vehicles({ onVehicleClick }) {
   }, []);
 
   useEffect(() => {
-    const uniqueModelsList = Array.from(new Set(vehiclesState.map(vehicle => vehicle.model)));
-    setUniqueModels(uniqueModelsList);
-  }, [vehiclesState]);
+    if (filter === 'LKW') {
+      setFilteredVehicles(vehiclesState.filter(vehicle => vehicle.lkw === true));
+    } else if (filter === 'PKW') {
+      setFilteredVehicles(vehiclesState.filter(vehicle => vehicle.lkw === false));
+    } else {
+      setFilteredVehicles(vehiclesState);
+    }
+  }, [filter, vehiclesState]);
 
-  useEffect(() => {
-    const filtered = vehiclesState.filter(vehicle => vehicle.model.includes(modelFilter));
-    setFilteredVehicles(filtered);
-  }, [modelFilter, vehiclesState]);
+  function handleModelFilterChange(event) {
+    setFilter(event.target.value);
+  }
 
   const toggleSortOptions = () => {
     setShowSortOptions(!showSortOptions);
@@ -38,10 +42,6 @@ function Vehicles({ onVehicleClick }) {
     setShowSortOptions(false);
     setSelectedSort(`${key} (${direction})`);
     setSelectedSortKey(null);
-  };
-
-  const handleModelFilterChange = (event) => {
-    setModelFilter(event.target.value);
   };
 
   return (
@@ -63,9 +63,8 @@ function Vehicles({ onVehicleClick }) {
         <div className="filter">
           <select id="model" onChange={handleModelFilterChange}>
             <option value="">All Models</option>
-            {uniqueModels.map((model, index) => (
-              <option key={index} value={model}>{model}</option>
-            ))}
+            <option value="LKW">LKW</option>
+            <option value="PKW">PKW</option>
           </select>
         </div>
         <div className="sort-container">
