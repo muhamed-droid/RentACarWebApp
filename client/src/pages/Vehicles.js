@@ -8,6 +8,9 @@ function Vehicles({ onVehicleClick }) {
   const [modelFilter, setModelFilter] = useState('');
   const [uniqueModels, setUniqueModels] = useState([]);
   const [filteredVehicles, setFilteredVehicles] = useState([]);
+  const [showSortOptions, setShowSortOptions] = useState(false);
+  const [selectedSort, setSelectedSort] = useState(null);
+  const [selectedSortKey, setSelectedSortKey] = useState(null);
 
   useEffect(() => {
     axios.get(`http://localhost:3001/vehicles`).then((response)=> { 
@@ -25,16 +28,24 @@ function Vehicles({ onVehicleClick }) {
     setFilteredVehicles(filtered);
   }, [modelFilter, vehiclesState]);
 
-  const sortBy = (key) => {
-    let direction = 'ascending';
-    if (sortConfig.key === key && sortConfig.direction === 'ascending') {
-      direction = 'descending';
-    }
+  const toggleSortOptions = () => {
+    setShowSortOptions(!showSortOptions);
+  };
+
+  const sortBy = (key, direction) => {
     setSortConfig({ key, direction });
+    setShowSortOptions(false);
+    setSelectedSort(`${key} (${direction})`);
+    setSelectedSortKey(null);
   };
 
   const handleModelFilterChange = (event) => {
     setModelFilter(event.target.value);
+  };
+
+  const toggleSortOptionsByKey = (key) => {
+    setSelectedSortKey(key);
+    setShowSortOptions(true);
   };
 
   const sortedVehicles = [...filteredVehicles].sort((a, b) => {
@@ -48,12 +59,20 @@ function Vehicles({ onVehicleClick }) {
   return (
     <div className='vozila'>
 
-       <h2 class="question-box">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</h2>
+       <h2 className="question-box">Suchen Sie ein Fahrzeug? Hier sind Sie richtig.</h2>
 
-      <div className="sort-buttons">
-        <button className="sort-button" onClick={() => sortBy('price')}>Sort by Price</button>
-        <button className="sort-button" onClick={() => sortBy('manufacturer')}>Sort by Name</button>
-        <button className="sort-button" onClick={() => sortBy('year')}>Sort by Year</button>
+      <div className="sort-container">
+        <button className="sort-button" onClick={toggleSortOptions}>Sort by</button>
+        {showSortOptions && (
+          <div className="sort-options">
+            <button className="sort-option" onClick={() => sortBy('price', 'ascending')}>Price (Ascending)</button>
+            <button className="sort-option" onClick={() => sortBy('price', 'descending')}>Price (Descending)</button>
+            <button className="sort-option" onClick={() => sortBy('manufacturer', 'ascending')}>Name (Ascending)</button>
+            <button className="sort-option" onClick={() => sortBy('manufacturer', 'descending')}>Name (Descending)</button>
+            <button className="sort-option" onClick={() => sortBy('year', 'ascending')}>Year (Ascending)</button>
+            <button className="sort-option" onClick={() => sortBy('year', 'descending')}>Year (Descending)</button>
+          </div>
+        )}
       </div>
       <div className="filter">
         <label htmlFor="model">Model:</label>
