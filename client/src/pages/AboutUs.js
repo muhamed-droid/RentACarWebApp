@@ -6,6 +6,7 @@ import Dino from '../photos/Dino.jpg';
 import Map from './Map.js';
 import AllRightsReserved from './AllRightsReserved.js';
 import ButtonToTop from './ButtonToTop.js';
+import Footer from './Footer.js';
 
 const AboutUs = () => {
   return (
@@ -34,6 +35,9 @@ const AboutUs = () => {
       </div>
       <div>
         <ButtonToTop/>
+      </div>
+      <div> 
+        <Footer/>
       </div>
       <div className='allRightsReserved'>
         <AllRightsReserved/>
