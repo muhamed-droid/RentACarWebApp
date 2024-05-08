@@ -9,6 +9,7 @@ import Map from './Map.js';
 import AllRightsReserved from './AllRightsReserved.js';
 import FAQ from './FAQ.js';
 import ButtonToTop from './ButtonToTop.js';
+import Footer from './Footer.js';
 import naslovna from '../photos/naslovna.jpg';
 
 function Home() {
@@ -63,6 +64,9 @@ function Home() {
         </div>
         <div className="google-map"> 
           <Map></Map>
+        </div>
+        <div className="footer">
+          <Footer></Footer>
         </div>
         <div className='allRightsReserved'>
           <AllRightsReserved/> 
