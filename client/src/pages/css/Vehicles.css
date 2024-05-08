@@ -4,7 +4,7 @@
 
 .vozila {
     justify-content: space-around;
-    margin-top: 10%;
+    margin-top: 3%;
     color: rgb(16, 15, 14);
   }
   
@@ -114,8 +114,8 @@
 
 .header-image {
   width: 100%;
-  height: 300px;
-  background: url('../../photos/front-image.jpg') no-repeat center center;
+  height: 600px;
+  background: url('../../photos/front-image.png') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
