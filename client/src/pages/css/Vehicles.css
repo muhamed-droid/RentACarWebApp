@@ -2,7 +2,7 @@
 .vozila {
   display: flex;
   justify-content: space-between;
-  margin-top: 15%;
+  margin-top: 5%;
   color: rgb(16, 15, 14);
 }
 
