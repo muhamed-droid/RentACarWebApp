@@ -6,6 +6,7 @@ import Map from './Map';
 import AllRightsReserved from './AllRightsReserved';
 import ButtonToTop from './ButtonToTop';
 import Footer from './Footer';
+import Logo from '../photos/logo.png'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,6 +57,7 @@ const Contact = () => {
   return (
     <div className='contact'>
       <Navbar />
+      <div className='glava'>
     <div className="contact-us-container">
       <h2>Contact Us</h2>
       {!submitted ? (
@@ -99,6 +101,15 @@ const Contact = () => {
           <p>Thank you for your message!</p>
         </div>
       )}
+    </div>
+      <div className='informa'>
+      <h2>Kontakt informacije</h2>
+        <p>Unsere Lokation: Italiener Straße 70, Villach, Österreich</p>
+        <p>Telefon: +436607700543</p>
+        <p>Email: dinomatoruga17@gmail.com</p>
+        <p>Radno vrijeme: Ponedjeljak-Petak: 09-18h, Subota: 09-15h</p>
+        <img src={Logo} alt="Logo" />
+    </div>
     </div>
     <div className='google-map'>
       <Map/>
