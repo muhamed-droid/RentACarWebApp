@@ -1,4 +1,3 @@
-// src/components/AboutUs.js
 import React from 'react';
 import './css/AboutUs.css'; // Make sure to create this CSS file
 import Navbar from './Navbar';
@@ -11,11 +10,11 @@ import Footer from './Footer.js';
 const AboutUs = () => {
   return (
     <div className="aboutUs">
-        <div className='navbar'>
+      <div className='navbar'>
         <Navbar></Navbar>
       </div>
       <div className="hero">
-        <h1>Willkommen im KFZ Hampi</h1>
+        <h1 className="animated-title">Willkommen im KFZ Hampi</h1>
         <p>Erfahren Sie mehr über unsere Mission, Vision und Werte.</p>
       </div>
 
@@ -23,7 +22,7 @@ const AboutUs = () => {
         <h2>Meet Our Team</h2>
         <div className="team-members">
           <div className="team-member">
-            <img src={Dino} alt="Team Member"/>
+            <img src={Dino} alt="Team Member" className="team-member-img"/>
             <h3>Dino</h3>
             <p>CEO</p>
           </div>
