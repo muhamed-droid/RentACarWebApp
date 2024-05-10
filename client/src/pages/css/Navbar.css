@@ -14,7 +14,7 @@
     justify-content: space-between;
     font-family: 'Poppins', sans-serif; /* Change the font */
     width: 100%; /* Make the header wider */
-    height: 12%;
+    height: 8%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.938); /* Add a subtle shadow */
     position: fixed;
     z-index: 999;
@@ -29,7 +29,7 @@
     color: white;
     margin-right: 50px;
   }
-  
+
   .contact-info p:first-child {
     margin-bottom: 5px;
   }
@@ -74,4 +74,8 @@
   
   .menu ul li a:hover {
     color: #ffd700;
+  }
+
+  .blank{
+    margin-left: 15%;
   }

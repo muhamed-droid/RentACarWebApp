@@ -12,7 +12,9 @@ function Test() {
     <div className="App">
         <header className="header">
           <div className="logo">
-            <img src={Logo} alt="Logo" />
+          <ScrollToTopLink to="/">
+              <img src={Logo} alt="Logo" />
+          </ScrollToTopLink>
           </div>
           <nav className="menu">
           <ul>
@@ -21,10 +23,10 @@ function Test() {
             <li><ScrollToTopLink to="/contact">Contact</ScrollToTopLink></li>
           </ul>
           </nav>
-          <div className="contact-info">
+          <p className="blank"><FaEnvelope /> <a className="link" href="mailto:dinomatoruga17@gmail.com">dinomatoruga17@gmail.com</a></p>
           <p><FaPhone /> <a className="link" href="tel:+436607700543">+436607700543</a></p>
+          <div className="contact-info">
           <p><FaPhone /> <a className="link" href="tel:+436603135530">+436603135530</a></p>
-          <p><FaEnvelope /> <a className="link" href="mailto:dinomatoruga17@gmail.com">dinomatoruga17@gmail.com</a></p>
           </div>
         </header>
 
