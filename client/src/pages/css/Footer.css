@@ -3,7 +3,7 @@
     justify-content: space-between; /* Equal space between columns */
     align-items: center; /* Center vertically */ 
     padding: 20px;
-    background-color: #333;
+    background-color: rgba(0, 77, 177, 0.938);
     color: #fff;
     font-family: Arial, sans-serif;
   }

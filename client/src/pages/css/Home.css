@@ -1,6 +1,6 @@
 
 .home-container {
-    background: url('../../photos/background.png') no-repeat center center fixed;
+    background-color: whitesmoke;
     background-size: cover;
     position: relative;
     overflow: hidden;

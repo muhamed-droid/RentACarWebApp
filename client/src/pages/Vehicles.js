@@ -63,7 +63,7 @@ function Vehicles({ onVehicleClick }) {
 
   return (
     <div className='vozila'>
-      <div className="title-vozila">Wagen</div>
+      <div className="title-vozila">Hier sind unsere Wagen</div>
       <div className="vehicle-form">
         <div className="left-content">
           <div className="vehicle-cards">

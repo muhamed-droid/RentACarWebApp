@@ -2,20 +2,20 @@
 
 /* Header Styles */
 .header {
-    background-color: rgb(10, 10, 28);
+    background-color: #007bffe7;
     color: #fff;
     margin: auto;
     display: flex;
     margin: auto;
     width: 50%;
-    border: 3px solid rgb(12, 7, 42);
+    border: 3px solid #007bff;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif; /* Change the font */
     width: 100%; /* Make the header wider */
-    height: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    height: 12%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.938); /* Add a subtle shadow */
     position: fixed;
     top: 0;
     left: 0;
