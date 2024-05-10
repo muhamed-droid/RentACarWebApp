@@ -2,11 +2,11 @@
 
 /* Header Styles */
 .header {
-    background-color: #007bffe7;
+    background-color: #007bff;
     color: #fff;
-    margin: auto;
+    margin-top:0;
     display: flex;
-    margin: auto;
+    margin-bottom: 0;
     width: 50%;
     border: 3px solid #007bff;
     padding: 10px;
@@ -17,15 +17,12 @@
     height: 12%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.938); /* Add a subtle shadow */
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
     z-index: 999;
   }
   
   .logo img {
     height: 110px; /* Adjust the width of the logo */
+    background-color: #007bff;
   }
   
   .link{
