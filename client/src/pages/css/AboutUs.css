@@ -1,3 +1,4 @@
+
 /* src/components/AboutUs.css 
 .aboutUs {
   font-family: 'Poppins', sans-serif; /* Change the font 
@@ -7,33 +8,35 @@
     overflow: hidden;
     color: black;
   }
+/* src/components/AboutUs.css */
+/* src/components/AboutUs.css */
+.animated-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-member-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member-img:hover {
+  transform: scale(1.1);
+}
   
   .hero {
     margin-top: 150px;
     text-align: center;
     padding: 50px 20px;
-  }
-
-  
-  .team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    background-color: #007bffe7;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    color: WHITE; 
-  }
-  
-  .team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
   }
   
   .team-member h3 {

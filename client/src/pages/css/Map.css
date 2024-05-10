@@ -5,6 +5,7 @@
     margin: 40px auto; /* Center on the page */
     padding: 20px;
     border-radius: 10px; /* Slightly softer corners */
+
     background: #007bffea; /* Less transparent, darker black */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* More intense shadow */
     font-family: 'Poppins', sans-serif;
@@ -13,7 +14,7 @@
   .map-header {
     margin-bottom: 20px;
     text-align: center;
-    background-color: #007bff; /* A solid color for better contrast (blue) */
+    background-color: rgba(1, 69, 157, 0.91); /* A solid color for better contrast (blue) */
     border-radius: 6px; /* Softer corners */
     padding: 15px;
   }
