@@ -7,6 +7,8 @@ import AllRightsReserved from './AllRightsReserved';
 import ButtonToTop from './ButtonToTop';
 import Footer from './Footer';
 import Logo from '../photos/logo.png'
+import '@fortawesome/fontawesome-free/css/all.css';
+import FAQ from './FAQ';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +60,15 @@ const Contact = () => {
     <div className='contact'>
       <Navbar />
       <div className='glava'>
+      <div className='informa'>
+      <h2>Kontaktinformationen</h2>
+        <p>Lokation: <i class="fa-solid fa-location-dot"></i> Italiener Straße 70, Villach, Österreich</p>
+        <p>Telefon: <i class="fa-solid fa-phone"></i> +436607700543</p>
+        <p>Email: <i class="fa-regular fa-envelope"></i> dinomatoruga17@gmail.com</p>
+        <p>Arbeitszeit: <i class="fa-solid fa-clock"></i> Montag-Freitag: 09-18h, Samstag: 09-15h</p>
+        <img src={Logo} alt="Logo" />
+        <FAQ/>
+    </div>
     <div className="contact-us-container">
       <h2>Contact Us</h2>
       {!submitted ? (
@@ -101,14 +112,14 @@ const Contact = () => {
           <p>Thank you for your message!</p>
         </div>
       )}
-    </div>
       <div className='informa'>
-      <h2>Kontakt informacije</h2>
-        <p>Unsere Lokation: Italiener Straße 70, Villach, Österreich</p>
-        <p>Telefon: +436607700543</p>
-        <p>Email: dinomatoruga17@gmail.com</p>
-        <p>Radno vrijeme: Ponedjeljak-Petak: 09-18h, Subota: 09-15h</p>
+      <h2>Kontaktinformationen</h2>
+        <p>Lokation: <i class="fa-solid fa-location-dot"></i> Italiener Straße 70, Villach, Österreich</p>
+        <p>Telefon: <i class="fa-solid fa-phone"></i> +436607700543</p>
+        <p>Email: <i class="fa-regular fa-envelope"></i> dinomatoruga17@gmail.com</p>
+        <p>Arbeitszeit: <i class="fa-solid fa-clock"></i> Montag-Freitag: 09-18h, Samstag: 09-15h</p>
         <img src={Logo} alt="Logo" />
+    </div>
     </div>
     </div>
     <div className='google-map'>

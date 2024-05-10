@@ -13,14 +13,15 @@
     margin-left: 25%;
     margin-right: 25%;
     padding: 30px;
-    background-color: #007bff;
+    background-color: rgba(126, 116, 116, 0.184);
     border-radius: 8px;
+    
   }
   
   .contact-us-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #fff;;
+    color: #030303;;
   }
   
   .form-group {
@@ -31,7 +32,7 @@
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #fff;;
+    color: #040404;;
   }
   
   input[type="text"],
