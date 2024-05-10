@@ -1,7 +1,7 @@
 /* ContactUs.css */
 
 .contact {
-    background: url('../../photos/background.png') no-repeat center center fixed;
+    background-color: white;
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -26,11 +26,11 @@
     margin-bottom: 20px;
   }
   
-  label {
+  .form-group label {
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #0e0d0d;
+    color: black;
   }
   
   input[type="text"],
