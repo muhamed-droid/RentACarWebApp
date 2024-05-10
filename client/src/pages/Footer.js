@@ -12,9 +12,8 @@ function Footer() {
             <div className="history-section">
                 <div className="logo-container"> 
                 <div className="small-logo"> <img src={Logo} alt="Logo" /> </div>
-                <div className="company-name"> KFZ Hampi</div>
+                <div className="company-info">  <p> KFZ Hampi ist ein tradition für Jahren. Wir sind hier seit 10 Jahren. Unsere Arbeit ist Menshen in Versuchen für Autos in Österreich gut gefühlt machen. Wir sind die Tradition...</p></div>
                 </div>
-                <p> KFZ Hampi ist ein tradition für Jahren. Wir sind hier seit 10 Jahren. Unsere Arbeit ist Menshen in Versuchen für Autos in Österreich gut gefühlt machen. Wir sind die Tradition...</p>
             </div>
             <div className="address-section">
                 <p><FaMapMarker/> <a className="link" href="https://maps.app.goo.gl/sUADQuFsrFnx663X9" target="_blank" rel="noopener noreferrer"> Vilach, Italiener Straße 70 </a> </p>

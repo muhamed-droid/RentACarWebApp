@@ -92,7 +92,7 @@ const Contact = () => {
               required
             />
           </div>
-          <button type="submit" disabled={submitting}>Submit</button>
+          <button type="submit" disabled={submitting} className="contact-button">Submit</button>
         </form>
       ) : (
         <div className="submitted-message">

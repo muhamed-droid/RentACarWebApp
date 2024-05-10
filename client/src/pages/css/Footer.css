@@ -5,7 +5,8 @@
     padding: 20px;
     background-color: #007bff;  
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    max-height: 180px;
   }
   
 
@@ -15,8 +16,7 @@
 }
 
 .history-section {
-    max-width: 25%;
-    padding-left: 50px;
+    max-width: 40%;
 }
 
 .address-section i {
@@ -24,7 +24,8 @@
 }
 
 .address-section {
-    padding-left: 120px;
+    padding-left: 30px;
+    margin-top: 3%;
 }
 
 .quick-links h4 {
@@ -63,10 +64,11 @@
     text-decoration: underline;
 }
 
+
 .small-logo img{
-    width: 100%; 
-    height: 100%;
-    margin: 0 auto 10px;
+    width: 80%; 
+    height: auto;
+    margin-top: 20%;
 }
 
 .logo-container{
@@ -77,8 +79,6 @@
     align-items: center;
 }
 
-.company-name{
-    font-size: 20px;
-    padding-left: 0;
-    margin-left: 0;
+.company-info{
+    margin-top: 10%;
 }
