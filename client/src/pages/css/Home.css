@@ -1,11 +1,16 @@
 
 .home-container {
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     position: relative;
     overflow: hidden;
     
     
+  }
+
+  .vehicles-navbar{
+    margin-top: 12%;
+    background-color: rgb(255, 255, 255);
   }
   
   .home-content {

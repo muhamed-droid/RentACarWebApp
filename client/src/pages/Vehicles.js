@@ -55,15 +55,14 @@ function Vehicles({ onVehicleClick }) {
   const toggleSortOptions = () => {
     setShowSortOptions(!showSortOptions);
   };
-
+  
   const sortBy = (key, direction) => {
     setSortConfig({ key, direction });
     setShowSortOptions(false);
   };
-
+  
   return (
     <div className='vozila'>
-      <div className="title-vozila">Hier sind unsere Wagen</div>
       <div className="vehicle-form">
         <div className="left-content">
           <div className="vehicle-cards">
@@ -72,9 +71,9 @@ function Vehicles({ onVehicleClick }) {
                 <div className="name">{value.manufacturer}</div>
                 <div className="model">{value.model}</div>
                 <div className="description">{value.description}</div>
-                <div className="price">{value.price} €/tag</div>
                 <img src={`./photos/${value.image_name}`} alt="vehicle" className="vehicle-image" />
-              </div>
+                <div className="price">{value.price} €/tag</div>
+               </div>
             ))}
           </div>
         </div>

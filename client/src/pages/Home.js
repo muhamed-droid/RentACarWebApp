@@ -4,13 +4,13 @@ import Navbar from './Navbar';
 import Vehicles from './Vehicles';
 import Modal from '../Modal.js';
 import './css/Home.css';
-import Form from './Form.js';
 import Map from './Map.js';
 import AllRightsReserved from './AllRightsReserved.js';
 import FAQ from './FAQ.js';
 import ButtonToTop from './ButtonToTop.js';
 import Footer from './Footer.js';
 import naslovna from '../photos/naslovna.jpg';
+import VehiclesNavbar from './VehiclesNavbar.js';
 
 function Home() {
   const [listOfVehicles, setListOfVehicles] = useState([]);
@@ -39,7 +39,9 @@ function Home() {
     <div className='home-container'>
       <Navbar />
       <div className='home-content'>
-
+      <div className="vehicles-navbar">
+      <VehiclesNavbar/>
+      </div>
     
       
         <Vehicles vehicles={listOfVehicles} onVehicleClick={handleVehicleClick} />
