@@ -5,6 +5,7 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
   }
 
 .contact-us-container {
@@ -12,14 +13,14 @@
     margin-left: 25%;
     margin-right: 25%;
     padding: 30px;
-    background-color: #f0eaeade;
+    background-color: #007bff;
     border-radius: 8px;
   }
   
   .contact-us-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #141313;
+    color: #fff;;
   }
   
   .form-group {
@@ -30,7 +31,7 @@
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
-    color: black;
+    color: #fff;;
   }
   
   input[type="text"],
@@ -49,8 +50,8 @@
   
   button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
+    color: black;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -58,7 +59,7 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #cfe6ff;
   }
   
   button:disabled {
