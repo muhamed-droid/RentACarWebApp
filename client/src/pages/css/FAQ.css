@@ -14,7 +14,7 @@
 .faq-container {
   max-width: 65%;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .faq {
@@ -24,14 +24,15 @@
 
 .faq-question {
   padding: 10px;
-  background-color: #e4e4e4;
+  background-color: #007bff;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #000000;
+  color: #fff;
   font-weight: bold;
   font-size: 18px;
+  border-radius: 5%;
 }
 
 .faq-answer {
@@ -56,3 +57,4 @@
 .faq-question:hover i {
   transform: rotate(180deg);
 }
+

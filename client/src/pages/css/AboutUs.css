@@ -1,13 +1,6 @@
 
 /* src/components/AboutUs.css 
-.aboutUs {
-  font-family: 'Poppins', sans-serif; /* Change the font 
-    background-color: #fff;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    color: black;
-  }
+
 /* src/components/AboutUs.css */
 /* src/components/AboutUs.css */
 .animated-title {
@@ -46,13 +39,15 @@
   .team-member p {
     color: #fff;
   } 
-   
 
-  */
-
-  .aboutus {
-    font-family: 'Poppins', sans-serif;
-  }
+  .aboutUs {
+    font-family: 'Poppins', sans-serif; 
+      background-color: #fff;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      color: black;
+    }
   
   .image-container{
     width: 100%;
