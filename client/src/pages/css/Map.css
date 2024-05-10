@@ -5,8 +5,10 @@
     margin: 40px auto; /* Center on the page */
     padding: 20px;
     border-radius: 10px; /* Slightly softer corners */
-    background:#007bff;; /* Less transparent, darker black */
+
+    background: #007bffea; /* Less transparent, darker black */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* More intense shadow */
+    font-family: 'Poppins', sans-serif;
   }
   
   .map-header {
@@ -21,7 +23,6 @@
     margin: 0;
     color: #ffffff; /* White for contrast */
     font-size: 32px; /* Larger font size */
-    font-family: 'Arial', sans-serif; /* Change to a more legible font */
     font-weight: bold;
   }
   
@@ -29,7 +30,6 @@
     margin: 8px 0;
     color: #f1f1f1; /* Light gray */
     font-size: 18px;
-    font-family: 'Arial', sans-serif;
   }
   
   .map-container iframe {
