@@ -67,3 +67,41 @@
     cursor: not-allowed;
   }
   
+
+  .glava {
+    margin-top: 10%;
+    display: flex;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .contact-us-container, .informa {
+      flex: 1;
+      margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .contact-us-container textarea{
+    height: 60px;
+  }
+  .informa {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .informa p {
+    font-size: 16px;
+  }
+
+  .informa h2 {
+    color: #333;
+  }
+
+  .informa img {
+    max-height: 200px;
+  }
