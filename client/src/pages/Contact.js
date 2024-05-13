@@ -76,6 +76,7 @@ const Contact = () => {
         <p>Haben Sie eine Frage an uns oder Feedback? Klicken Sie bitte auf die am besten geeignete Kategorie und füllen Sie das Formular aus, um uns zu erreichen.</p>
         <img src={Logo} alt="Logo" />
     </div>
+    <div className='contact-forma'>
       <h2>Contact Us</h2>
       {!submitted ? (
         <form onSubmit={handleSubmit}>
@@ -118,6 +119,7 @@ const Contact = () => {
           <p>Thank you for your message!</p>
         </div>
       )}
+      </div>
     </div>
     </div>
     <div className='google-map'>
