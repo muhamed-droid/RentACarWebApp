@@ -189,6 +189,25 @@
 }
 
 @media (max-width: 1024px) {
+
+  .vehicle-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, calc(50% / 2))); /* Adjust as needed */
+    grid-auto-rows: minmax(70px, auto); /* Adjust row height as needed */
+    gap: 10px; /* Adjust gap between grid items */
+  }
+  .vehicle-card .vehicle-image {
+    background-color: #f0f0f000;
+    width: 50%;
+    height: 80px;
+    object-fit: fill;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .left-content{
+    min-height: fit-content;
+  }
+
   .vehicle-card .name, .vehicle-card .model, .vehicle-card .price {
     font-size: 16px; /* Smaller font size for smaller screens */
     padding: 10px;
