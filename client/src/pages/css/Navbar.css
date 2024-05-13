@@ -74,7 +74,7 @@
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: 429px) {
   .menu ul {
       font-size: 14px;
       display: none; /* Hide the menu by default on small screens */
@@ -89,6 +89,7 @@
 
   .menu.active ul {
       display: flex; /* Show the menu when active */
+      top: 90%;
   }
 
   .menu-toggle {
@@ -122,10 +123,11 @@
     margin-bottom:5px;
     font-size: 7px;
   }
+
 }
 
 
-@media (max-width: 950px) and (min-width: 415px) {
+@media (max-width: 950px) and (min-width: 429px) {
   .menu ul {
       font-size: 14px;
       display: none; /* Hide the menu by default on small screens */
@@ -140,6 +142,7 @@
 
   .menu.active ul {
       display: flex; /* Show the menu when active */
+      top: 90%;
   }
 
   .menu-toggle {
@@ -173,6 +176,7 @@
     margin-bottom:5px;
     font-size: 9px;
   }
+
 }
 
 
