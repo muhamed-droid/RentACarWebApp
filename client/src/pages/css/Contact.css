@@ -14,7 +14,8 @@
     margin-right: 25%;
     padding: 30px;
     background-color: rgba(126, 116, 116, 0.184);
-    border-radius: 8px;
+    border: 2px solid #000000;
+    border-radius: 20px;
     
   }
   
@@ -51,12 +52,15 @@
   
   .contact-button {
     padding: 10px 20px;
-    background-color: #002049;
+    margin-bottom: 2%;
+    background-color: #007bff;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    max-width: 90%;
+    
   }
   
   .contact-button:hover {
@@ -67,7 +71,11 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
-  
+  .contact-forma{
+
+border: 2px solid #000000;
+    border-radius: 20px;
+  }
 
   .glava {
     margin-top: 5%;
@@ -91,7 +99,8 @@
     flex: 1;
     margin: 10px;
     padding: 20px;
-    border-radius: 8px;
+    border: 2px solid #000000;
+    border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
