@@ -6,7 +6,7 @@
   margin-top: 50px;
   padding: 5px 0;
   text-align: center;
-  background-color: #ffffffee;
+  background-color: #F0F0F0;
   font-size: 24px;
   border-color: #000000;
 }
@@ -24,12 +24,12 @@
 
 .faq-question {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #F0F0F0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: #333333;
   font-weight: bold;
   font-size: 18px;
   border-radius: 5%;
@@ -57,4 +57,3 @@
 .faq-question:hover i {
   transform: rotate(180deg);
 }
-

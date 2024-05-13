@@ -37,9 +37,9 @@
 }
   
   .vehicle-card {
-    max-width: 300px;
-    border: 1px solid #19233aaa;
-    border-radius: 10px;
+    padding: 7px;
+    border: 2px solid #000000;
+    border-radius: 20px;
     margin-top: 20px;
     margin-left:5px;
     cursor: pointer;
@@ -53,17 +53,20 @@
   
   .vehicle-card .name {
     margin-bottom: 1px;
-    border-bottom: #fff;
+    border-top: 1px solid #f3eeee05;
+    border-bottom: 1px solid #f3eeee05;
     border-width: 1px;
+    
   }
 
   .vehicle-card .name, .model {
     font-size: 20px;
     font-weight: bold;
     padding: 3%;
-    background-color: #007bff;
+    background-color: #F0F0F0;
+    border-top: 1px solid #f3eeee05;
     border-bottom: 1px solid #f3eeee05;
-    color: white;
+    color: #333333;
   }
   
   .body {
@@ -73,9 +76,9 @@
   .vehicle-card .price {
     font-weight: bold;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #F0F0F0;
     border-top: 1px solid #fff;
-    color: white;
+    color: #333333;
   }
   .vehicle-card .vehicle-image {
     background-color: #f0f0f000;
@@ -117,6 +120,7 @@
 
 #model{
   font-size: 20px;
+  background-color: #F0F0F0;
 }
 
 .sort-button {
@@ -155,7 +159,7 @@
 
 
 .header-text {
-  color: white;
+  color: #333333;
   font-size: 28px;
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
@@ -174,8 +178,8 @@
   font-size: 36px;
   text-align: center;
   font-weight: bold;
-  background-color: #007bff;
-  color: white;
+  background-color: #F0F0F0;
+  color: #333333;
   padding: 20px;
 }
 

@@ -1,39 +1,39 @@
 /* Map.css */
 .map-frame {
-    width: 80%;
-    max-width: 1000px;
-    margin: 40px auto; /* Center on the page */
-    padding: 20px;
-    border-radius: 10px; /* Slightly softer corners */
-    background: #007bffea; /* Less transparent, darker black */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* More intense shadow */
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .map-header {
-    margin-bottom: 20px;
-    text-align: center;
-    border-radius: 6px; /* Softer corners */
-    padding: 15px;
-  }
-  
-  .map-header h2 {
-    margin: 0;
-    color: #ffffff; /* White for contrast */
-    font-size: 32px; /* Larger font size */
-    font-weight: bold;
-  }
-  
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto; /* Center on the page */
+  padding: 20px;
+  border-radius: 20px; /* Slightly softer corners */
+  background: #333333; /* Less transparent, darker black */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* More intense shadow */
+  font-family: 'Poppins', sans-serif;
+  border-color: #333333;
+}
+
+.map-header {
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 6px; /* Softer corners */
+  padding: 15px;
+}
+
+.map-header h2 {
+  margin: 0;
+  color: #FFFFFF; /* White for contrast */
+  font-size: 32px; /* Larger font size */
+  font-weight: bold;
+}
 
 
-  .map-header p {
-    margin: 8px 0;
-    color: #f1f1f1; /* Light gray */
-    font-size: 18px;
-  }
-  
-  .map-container iframe {
-    border-radius: 6px;
-    box-shadow: 0 4px 8px #007bffea; /* Slightly stronger shadow */
-  }
-  
+
+.map-header p {
+  margin: 8px 0;
+  color: #FFFFFF; /* Light gray */
+  font-size: 18px;
+}
+
+.map-container iframe {
+  border-radius: 6px;
+  box-shadow: 0 4px 8px #007bffea; /* Slightly stronger shadow */
+}
