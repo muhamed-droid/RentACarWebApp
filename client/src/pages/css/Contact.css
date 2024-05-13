@@ -25,7 +25,7 @@
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   
   .form-group label {
@@ -70,7 +70,7 @@
   
 
   .glava {
-    margin-top: 10%;
+    margin-top: 5%;
     display: flex;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -104,5 +104,5 @@
   }
 
   .informa img {
-    max-height: 200px;
+    max-height: 120px;
   }
