@@ -56,7 +56,7 @@
 .quick-links li a::before {
     content: '→'; /* Represents the arrow */
     position: absolute;
-    left: 50%; /* Positions the arrow to the far right of the link */
+    left: 0; /* Positions the arrow to the far right of the link */
     top: 0; /* Aligns the arrow at the top of the link */
 }
 

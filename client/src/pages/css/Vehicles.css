@@ -4,7 +4,6 @@
   justify-content: space-between;
   margin-top: 0%;
   background-color: rgba(255, 255, 255, 0.26);
-  padding-top: 3%;
   flex-direction: column;
   font-family: 'Poppins', sans-serif; /* Change the font */
 }
@@ -188,3 +187,59 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media (max-width: 1024px) {
+  .vehicle-card .name, .vehicle-card .model, .vehicle-card .price {
+    font-size: 16px; /* Smaller font size for smaller screens */
+    padding: 10px;
+  }
+  .vehicle-cards{
+    flex-direction: column; /* Stacks the children vertically */
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+  }
+
+  .sort-button {
+    padding: 8px 10px;
+    margin: 0 auto;
+    font-size: 18px;
+    width: 90%;
+  }
+  .vehicle-form {
+    flex-direction: column;
+  }
+
+    .form-container{
+      margin-right: 0;
+      margin-left: 10%;
+    }
+
+  .form{
+    width: 100%;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .left-content, .right-content {
+    width: 100%;
+    padding: 0 0px;
+    align-items: center;
+  }
+
+  .sort-container {
+    .sort-container {
+      display: flex;
+      justify-content: center; /* This will center the button horizontally in the container */
+      align-items: center; /* This will center the button vertically if needed */
+      width: 100%; /* Ensure the container takes full width */
+      margin-left: auto; /* Overrides any specific margin that may have been set before */
+      margin-right: auto; /* Ensures any specific margin is neutralized */
+      padding: 20px 0; /* Adds vertical padding for better spacing */
+    }
+  }
+
+  .sort-options, .filter {
+    width: 100%;
+  }
+}
+
