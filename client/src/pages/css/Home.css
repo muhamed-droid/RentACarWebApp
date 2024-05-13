@@ -1,3 +1,4 @@
+/* Base styles that apply to all sizes */
 .home-container {
   background-image: white;
   background-size: cover;
@@ -5,30 +6,79 @@
   position: relative;
   overflow: hidden;
   color: #333333;
-  
 }
 
-.vehicles-navbar{
+.vehicles-navbar {
   margin-top: 12%;
   background-color: rgba(255, 255, 255, 0.158);
 }
 
 .home-content {
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
-.slika{
-  width: 20%;
-  height: 20%;
+.vehicles-navbar, .google-map, .naslovna-img {
+  width: 100%; /* Ensure these elements also take full width */
 }
-  
-.google-map{
-margin-top: 120px;
-margin-bottom: 100px;
-}
-.naslovna-img {
-width: 100%; 
-height: 20%;
 
+.slika {
+  width: 100%; /* Full width on smaller screens, can adjust below */
+  height: auto; /* Maintain aspect ratio */
 }
+
+.google-map {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+.naslovna-img {
+  width: 100%;
+  height: auto; /* Adjust height to maintain aspect ratio */
+}
+
+/* Smaller devices (phones, less than 768px) */
+@media (max-width: 768px) {
+  .vehicles-navbar {
+    margin-top: 8%; /* Less margin on smaller screens */
+  }
+
+  .google-map {
+    margin-top: 60px; /* Less margin on top */
+    margin-bottom: 60px; /* Less margin on bottom */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .slika {
+    width: 50%; /* Larger images on tablets and up */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .vehicles-navbar {
+    margin-top: 2%; /* Smaller margin on larger screens */
+  }
+
+  .google-map {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .slika {
+    width: 20%; /* Original size for large screens */
+  }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .home-container {
+    width: 100%; /* Use full width of the screen */
+    margin: 0; /* Remove margin to use full width */
+  }
+}
+

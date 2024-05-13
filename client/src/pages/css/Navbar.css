@@ -1,81 +1,261 @@
-/* App.css */
-
 /* Header Styles */
 .header {
-    background-color: #007bff;
-    color: #fff;
-    top:0;
-    margin-top:0;
-    display: flex;
-    margin-bottom: 0;
-    border: 3px solid #007bff;
-    padding: 10px;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Poppins', sans-serif; /* Change the font */
-    width: 100%; /* Make the header wider */
-    height: 8%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.938); /* Add a subtle shadow */
-    position: fixed;
-    z-index: 999;
-  }
-  
-  .logo img {
-    height: 80px; /* Adjust the width of the logo */
-    background-color: #007bff;
-  }
-  
-  .link{
-    color: white;
-    margin-right: 50px;
-  }
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.938);
+  position: fixed;
+  z-index: 999;
+  height: 8%; /* Allow height to adjust based on content */
+}
 
-  .contact-info p:first-child {
-    margin-bottom: 5px;
-  }
-  
 .contact-info {
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Display items in a column */
-  }
-  
-  .contact-info p {
-    margin-top: 10px; /* Add some space between phone and email */
-    font-size: 16px;
-    margin-right: 30px;
-  }
-  
-  .contact-info i {
-    margin-right: 5px;
-  }
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: row; 
+  justify-content: flex-end;
+  width: 100%;  
+}
 
-  /* Test.css */
+.contact-info p {
+  margin-top: 0; /* Adjusted for better alignment */
+  font-size: 16px;
+  margin-right: 30px;
+}
 
-/* Menu Styles */
+.logo img {
+  height: 50px;
+  background-color: #007bff;
+}
+
+.link {
+  color: white;
+  margin-right: 50px;
+}
+
+.menu-toggle {
+  width:40%;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu ul li {
-    display: inline;
-    margin-right: 40px; /* Increase the gap between menu items */
-  }
-  
-  .menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px; /* Increase the font size */
-    transition: color 0.3s ease;
-  }
-  
-  .menu ul li a:hover {
-    color: #ffd700;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Ensure vertical alignment */
+  width: max-content;
+}
+
+.menu ul li {
+  margin-right: 40px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #ffd700;
+}
+
+
+@media (max-width: 950px) {
+  .menu ul {
+      font-size: 14px;
+      display: none; /* Hide the menu by default on small screens */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 80px; /* Adjusted top position */
+      left: 0;
+      background-color: #007bff;
+      padding: 20px 0; /* Add padding for touch area */
   }
 
-  .blank{
-    margin-left: 15%;
+  .menu.active ul {
+      display: flex; /* Show the menu when active */
   }
+
+  .menu-toggle {
+      justify-content: center;
+      display: block; /* Show the toggle button on small screens */
+  }
+
+  .menu ul li {
+      text-align: center;
+      width: 100%;
+      margin-right: 0; /* Remove margin for mobile view */
+  }
+
+  .menu ul li a {
+      padding: 7px;
+      font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .contact-info {
+    width: 100%;
+    flex-direction: column;
+    margin-right: 0;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-info p {
+    margin-right: 0; /* Align email and phone on mobile */
+    margin-top: 5px;
+    margin-bottom:5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 415px) {
+  .menu ul {
+      font-size: 14px;
+      display: none; /* Hide the menu by default on small screens */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 80px; /* Adjusted top position */
+      left: 0;
+      background-color: #007bff;
+      padding: 20px 0; /* Add padding for touch area */
+  }
+
+  .menu.active ul {
+      display: flex; /* Show the menu when active */
+  }
+
+  .menu-toggle {
+      justify-content: center;
+      display: block; /* Show the toggle button on small screens */
+  }
+
+  .menu ul li {
+      text-align: center;
+      width: 100%;
+      margin-right: 0; /* Remove margin for mobile view */
+  }
+
+  .menu ul li a {
+      padding: 7px;
+      font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .contact-info {
+    width: 100%;
+    flex-direction: column;
+    margin-right: 0;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-info p {
+    margin-right: 0; /* Align email and phone on mobile */
+    margin-top: 5px;
+    margin-bottom:5px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 345px) {
+  .menu ul {
+      font-size: 14px;
+      display: none; /* Hide the menu by default on small screens */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 80px; /* Adjusted top position */
+      left: 0;
+      background-color: #007bff;
+      padding: 20px 0; /* Add padding for touch area */
+  }
+
+  .menu.active ul {
+      display: flex; /* Show the menu when active */
+  }
+
+  .menu-toggle {
+      justify-content: center;
+      display: block; /* Show the toggle button on small screens */
+  }
+
+  .menu ul li {
+      text-align: center;
+      width: 100%;
+      margin-right: 0; /* Remove margin for mobile view */
+  }
+
+  .menu ul li a {
+      padding: 7px;
+      font-size: 20px; /* Adjusted font size for mobile */
+  }
+
+  .contact-info {
+    width: 100%;
+    flex-direction: column;
+    margin-right: 0;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-info p {
+    margin-right: 0; /* Align email and phone on mobile */
+    margin-top: 5px;
+    margin-bottom:5px;
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .link {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  .contact-info{
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-height:750px) and (max-width:1000px){
+  .menu ul {
+    font-size: 14px;
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Adjusted top position */
+    left: 0;
+    background-color: #007bff;
+    padding: 20px 0; /* Add padding for touch area */
+}
+}
+
+@media (min-height:1000px) and (max-width: 950px){
+  .menu ul {
+    font-size: 14px;
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 90px; /* Adjusted top position */
+    left: 0;
+    background-color: #007bff;
+    padding: 20px 0; /* Add padding for touch area */
+}
+}
