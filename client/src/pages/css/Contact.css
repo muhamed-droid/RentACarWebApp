@@ -13,9 +13,7 @@
     margin-left: 25%;
     margin-right: 25%;
     padding: 30px;
-    background-color: rgba(126, 116, 116, 0.184);
-    border: 2px solid #000000;
-    border-radius: 20px;
+    
     
   }
   
@@ -73,8 +71,9 @@
   }
   .contact-forma{
 
-border: 2px solid #000000;
+    border: 2px solid #000000;
     border-radius: 20px;
+    background-color: #cccccc8e;
   }
 
   .glava {
@@ -89,7 +88,7 @@ border: 2px solid #000000;
       margin: 10px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
   }
 
   .contact-us-container textarea{
@@ -100,6 +99,7 @@ border: 2px solid #000000;
     margin: 10px;
     padding: 20px;
     border: 2px solid #000000;
+    background-color: rgba(126, 116, 116, 0.184);
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
