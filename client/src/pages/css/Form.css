@@ -150,3 +150,9 @@ z-index: 1; /* Ensure the button is above the form */
   border: 2px solid red;
   background-color: #ffe6e6;
 }
+
+@media (max-height:780px){
+  .additional-form-container {
+    margin-top: 30px;
+  }
+}
