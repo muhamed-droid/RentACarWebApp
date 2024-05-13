@@ -78,7 +78,7 @@
   .menu ul {
       font-size: 14px;
       display: none; /* Hide the menu by default on small screens */
-      flex-direction: column;
+      flex-direction: row;
       width: 100%;
       position: absolute;
       top: 80px; /* Adjusted top position */
@@ -131,7 +131,7 @@
   .menu ul {
       font-size: 14px;
       display: none; /* Hide the menu by default on small screens */
-      flex-direction: column;
+      flex-direction: row;
       width: 100%;
       position: absolute;
       top: 80px; /* Adjusted top position */
@@ -198,7 +198,7 @@
   .menu ul {
     font-size: 14px;
     display: none; /* Hide the menu by default on small screens */
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     position: absolute;
     top: 70px; /* Adjusted top position */
@@ -212,7 +212,7 @@
   .menu ul {
     font-size: 14px;
     display: none; /* Hide the menu by default on small screens */
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     position: absolute;
     top: 90px; /* Adjusted top position */
