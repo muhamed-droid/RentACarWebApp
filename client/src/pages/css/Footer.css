@@ -56,7 +56,7 @@
 .quick-links li a::before {
     content: '→'; /* Represents the arrow */
     position: absolute;
-    left: 30%; /* Positions the arrow to the far right of the link */
+    left: 0; /* Positions the arrow to the far right of the link */
     top: 0; /* Aligns the arrow at the top of the link */
 }
 
@@ -82,3 +82,94 @@
 .company-info{
     margin-top: 10%;
 }
+
+@media (max-width:980px){
+    .footer {
+        display: flex;
+        justify-content: space-between; /* Equal space between columns */
+        align-items: center; /* Center vertically */ 
+        flex-direction: column;
+        padding: 10px;
+        background-color: #007bff;  
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        max-height: fit-content;
+        font-size: 14px;
+      }
+      
+    
+    .footer div {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .history-section{
+        max-width: 100%;
+    }
+    
+    .address-section i {
+        margin-bottom: 10px;
+    }
+    
+    .address-section {
+        padding-bottom: 30px;
+        margin-top: 3%;
+    }
+    
+    .quick-links h4 {
+        margin-bottom: 10px;
+    }
+    
+    .quick-links{
+        font-size: 12px;
+    }
+    
+    .quick-links ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .quick-links li {
+        position: relative; /* Ensures the absolute positioning of the arrow is relative to the link */
+        padding-bottom: 10px; /* Provides space for the arrow */
+    }
+    
+    .quick-links li a {
+        color: #e2e2e2;
+        text-decoration: none;
+        padding-bottom: 7%;
+        margin-left: 2%;
+    }
+
+    .quick-links li a::before {
+        content: '→'; /* Represents the arrow */
+        position: relative;
+        left: 0%; /* Positions the arrow to the far right of the link */
+        top: 0; /* Aligns the arrow at the top of the link */
+    }
+
+    .quick-links li a:hover {
+        text-decoration: underline;
+    }
+    
+
+    .small-logo img{
+        width: 70%; 
+        height: auto;
+        margin-top: 3%;
+        align-items: center;
+    }
+    
+    .logo-container{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .company-info{
+        margin-top: 10%;
+    }
+}
+

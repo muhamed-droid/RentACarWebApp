@@ -3,3 +3,13 @@
     text-align: center;
     margin-top: 8%;
 }
+@media (max-width: 950px) {
+    .vehicles-navbar{
+        margin-top: 100px;
+    }
+}
+@media (min-height: 1270px){
+    .vehicles-navbar{
+        margin-top: 150px;
+    }
+}

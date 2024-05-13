@@ -1,8 +1,20 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
 
-/* src/components/AboutUs.css 
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-/* src/components/AboutUs.css */
-/* src/components/AboutUs.css */
+
+.home-container {
+  width: 100%;
+}
+
 .animated-title {
   animation: fadeInUp 1s ease-out;
 }
@@ -25,129 +37,136 @@
 .team-member-img:hover {
   transform: scale(1.1);
 }
-  
-  .hero {
-    margin-top: 150px;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .team-member h3 {
-    color: #fff;
-  }
-  
-  .team-member p {
-    color: #fff;
-  } 
 
-  .aboutUs {
-    font-family: 'Poppins', sans-serif; 
-      background-color: #fff;
-      background-size: cover;
-      position: relative;
-      overflow: hidden;
-      color: black;
-    }
-  
-  .image-container{
-    width: 100%;
-    height: 600px;
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
 
-  }
+.team-member h3,
+.team-member p {
+  color: #fff;
+}
 
-  .image{
-    width: 100%;
-    height: 100%;
-  }
+.aboutUs {
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
 
-  .intro-section{
-    margin: 4%;
-  }
+.image-container {
+  width: 100%;
+}
 
+.image {
+  width: 100%;
+}
+
+.intro-section {
+  padding: 4%;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+}
+
+.vision-mission-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.vision,
+.mission {
+  flex: 1 1 45%;
+  text-align: center;
+  padding: 20px;
+}
+
+.vision img,
+.mission img {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.member {
+  text-align: center;
+  flex: 1 1 20%;
+}
+
+.member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+.member h3,
+.member p {
+  color: #333;
+}
+
+.team {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
   .intro-section h1 {
-    font-size: 2.5rem;
-    margin-top: 4%;
-    color: #333;
-  }
-  
-  .intro-section p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .vision-mission-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
+    font-size: 2rem;
   }
   
   .vision, .mission {
-    width: 45%;
-    text-align: center;
-    padding: 20px;
+    flex: 1 1 100%; /* Stack on smaller screens */
   }
-  
-  .vision img  {
-    width: 140px;  /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .intro-section h1 {
+    font-size: 1.5rem;
   }
 
-  .mission img {
-    width: 100px;  /* Adjust size as needed */
-    height: 80px;
-    margin-bottom: 20px;
-  }
-  .vision h2, .mission h2 {
-    font-size: 2rem;
-    color: #333;
-  }
-
-  .mission h2{
-    margin-top: 38px;
-  }
-  
-  .vision p, .mission p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  
-  .team-section h2 {
-    font-size: 2rem;
-    color: #333;
+  .member {
+    flex: 1 1 45%; /* More space per member on smaller screens */
   }
   
   .team-members {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member h3, .team-member p {
+    color: #333; /* Improve readability on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    padding: 10%;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
   }
   
   .member {
-    text-align: center;
-    width: 20%;
+    flex: 1 1 100%; /* Full width for each member */
   }
-  
-  .member img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #ccc;
-  }
-  
-  .member h3 {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .member p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-    
-  .team {
-    padding: 20px;
-    text-align: center;
-  }
+}
