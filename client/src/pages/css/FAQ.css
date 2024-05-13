@@ -57,3 +57,40 @@
 .faq-question:hover i {
   transform: rotate(180deg);
 }
+
+@media (max-width:960px){
+  .question-box {
+    font-size: 12px;
+    color: #000000ea;
+    margin-top: 50px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #F0F0F0;
+    border-color: #000000;
+  }
+  
+  .faq-container {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .faq {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .faq-question {
+    font-size: 12px;
+  }
+  
+  .faq-answer {
+    font-size: 10px;
+  }
+  
+  
+  .faq-question i {
+    font-size: 14px;
+  }
+
+}

@@ -38,26 +38,4 @@
   box-shadow: 0 4px 8px #007bffea; /* Slightly stronger shadow */
 }
 
-@media (max-height:700px) {
-  .map-frame{
-    width: 80%;
-    height: 400px;
-    margin: 40px auto; /* Center on the page */
-    padding: 20px;
-    border-radius: 20px; /* Slightly softer corners */
-    background: #333333; /* Less transparent, darker black */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* More intense shadow */
-    font-family: 'Poppins', sans-serif;
-    border-color: #333333;
-    font-size: 10px;
-  }
-  .map-header h2{
-    font-size: 20px;
-  }
-  .map-header p{
-    font-size: 14px;
-  }
-  .map-container iframe {
-    height: 270px;
-  }
-}
+

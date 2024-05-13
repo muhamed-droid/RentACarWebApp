@@ -13,8 +13,6 @@
     margin-left: 25%;
     margin-right: 25%;
     padding: 30px;
-    
-    
   }
   
   .contact-us-container h2 {
@@ -80,7 +78,6 @@
     margin-top: 5%;
     display: flex;
     padding: 20px;
-    font-family: Arial, sans-serif;
   }
 
   .contact-us-container, .informa {
@@ -114,4 +111,27 @@
 
   .informa img {
     max-height: 120px;
+  }
+
+  @media (max-width:960px) {
+    .glava {
+      margin-top: 13%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+  
+    .informa p {
+      font-size: 12px;
+    }
+  
+    .informa h2 {
+      color: #333;
+      font-size: 16px;
+    }
+  
+    .informa img {
+      max-height: 100px;
+    }
   }
