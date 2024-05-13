@@ -66,10 +66,16 @@ const Contact = () => {
         <p>Telefon: <i class="fa-solid fa-phone"></i> +436607700543</p>
         <p>Email: <i class="fa-regular fa-envelope"></i> dinomatoruga17@gmail.com</p>
         <p>Arbeitszeit: <i class="fa-solid fa-clock"></i> Montag-Freitag: 09-18h, Samstag: 09-15h</p>
-        <img src={Logo} alt="Logo" />
         <FAQ/>
     </div>
     <div className="contact-us-container">
+    <div className='informa'>
+      <h2>Habe Fragen? Schicken Sie uns eine E-Mail.</h2>
+        <p>Wir sind eine branchenführende Publikation, die die neuesten Nachrichten und Erkenntnisse über SEO, Suche und deren Auswirkungen auf Ihr Unternehmen und Ihre Karriere bietet.
+</p>
+        <p>Haben Sie eine Frage an uns oder Feedback? Klicken Sie bitte auf die am besten geeignete Kategorie und füllen Sie das Formular aus, um uns zu erreichen.</p>
+        <img src={Logo} alt="Logo" />
+    </div>
       <h2>Contact Us</h2>
       {!submitted ? (
         <form onSubmit={handleSubmit}>
@@ -112,14 +118,6 @@ const Contact = () => {
           <p>Thank you for your message!</p>
         </div>
       )}
-      <div className='informa'>
-      <h2>Kontaktinformationen</h2>
-        <p>Lokation: <i class="fa-solid fa-location-dot"></i> Italiener Straße 70, Villach, Österreich</p>
-        <p>Telefon: <i class="fa-solid fa-phone"></i> +436607700543</p>
-        <p>Email: <i class="fa-regular fa-envelope"></i> dinomatoruga17@gmail.com</p>
-        <p>Arbeitszeit: <i class="fa-solid fa-clock"></i> Montag-Freitag: 09-18h, Samstag: 09-15h</p>
-        <img src={Logo} alt="Logo" />
-    </div>
     </div>
     </div>
     <div className='google-map'>
