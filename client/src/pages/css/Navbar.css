@@ -74,7 +74,7 @@
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 415px) {
   .menu ul {
       font-size: 14px;
       display: none; /* Hide the menu by default on small screens */
@@ -120,11 +120,12 @@
     margin-right: 0; /* Align email and phone on mobile */
     margin-top: 5px;
     margin-bottom:5px;
-    font-size: 12px;
+    font-size: 7px;
   }
 }
 
-@media (max-width: 415px) {
+
+@media (max-width: 950px) and (min-width: 415px) {
   .menu ul {
       font-size: 14px;
       display: none; /* Hide the menu by default on small screens */
@@ -174,55 +175,6 @@
   }
 }
 
-@media (max-width: 345px) {
-  .menu ul {
-      font-size: 14px;
-      display: none; /* Hide the menu by default on small screens */
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-      top: 80px; /* Adjusted top position */
-      left: 0;
-      background-color: #007bff;
-      padding: 20px 0; /* Add padding for touch area */
-  }
-
-  .menu.active ul {
-      display: flex; /* Show the menu when active */
-  }
-
-  .menu-toggle {
-      justify-content: center;
-      display: block; /* Show the toggle button on small screens */
-  }
-
-  .menu ul li {
-      text-align: center;
-      width: 100%;
-      margin-right: 0; /* Remove margin for mobile view */
-  }
-
-  .menu ul li a {
-      padding: 7px;
-      font-size: 20px; /* Adjusted font size for mobile */
-  }
-
-  .contact-info {
-    width: 100%;
-    flex-direction: column;
-    margin-right: 0;
-    justify-content: center;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .contact-info p {
-    margin-right: 0; /* Align email and phone on mobile */
-    margin-top: 5px;
-    margin-bottom:5px;
-    font-size: 8px;
-  }
-}
 
 @media (min-width: 1000px) and (max-width: 1300px) {
   .link {
@@ -264,4 +216,10 @@
     background-color: #007bff;
     padding: 20px 0; /* Add padding for touch area */
 }
+}
+
+@media (max-height: 600px) {
+    .header{
+      height: 70px;
+    }
 }
